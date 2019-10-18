@@ -1,0 +1,118 @@
+﻿drop table if exists cgqgd;
+-- 采购请购
+create table cgqgd(
+BillStyleID Varchar(50),-- 采购请购类型
+BillStatus Varchar(50), -- 单况
+BillDate Date, -- 单据日期
+BillNO int, -- 单据号码
+SalesID Varchar(50),-- 请购人员
+Maker	Varchar(50),-- 制单人员
+DepartID Varchar(50),-- 请购部门
+Permitter Varchar(50),-- 复核人员
+a Varchar(50),
+b Varchar(50)
+);
+drop table if exists cgqgdnr;
+-- 采购请购单内容
+create table cgqgdnr(
+StuNo int primary key auto_increment,-- 栏号
+ProdID Varchar(50),-- 物料编号
+ProdName Varchar(50),-- 物料名称
+ProdSize Varchar(50),-- 规格型号
+SUnit Varchar(50) , -- 单位名称
+sQuantity Varchar(50),-- 数量
+CurrID Varchar(50),-- 币别
+sPrice float,-- 标准进价
+Amount float,-- 标准进价金额
+LastestsPrice float,-- 单价
+LastestAmount float,-- 进阶金额
+PreInDate Date,-- 需求日期
+SuggestPur Date,-- 建议采购日期
+QtyRemain int,-- 未采购量
+ItemRemark Varchar(50),-- 分录备注
+TranType Varchar(50),-- 来源单别
+FromNo int,-- 折扣前单价
+a Varchar(50),
+b Varchar(50)
+);
+drop table if exists cgdd;
+-- 采购订单
+create table cgdd(
+CustomerID  Varchar(50),-- 供应商
+AddressID varchar(20) ,-- 供应商地址
+BillStyleName Varchar(50),-- 采购订单类型
+PriceOfTax Date,-- 单价是否含税
+BillStatus int,-- 单况
+BillDate Varchar(50),-- 单据日期
+BillNO Varchar(50),-- 单据号码
+CurrID Varchar(50),-- 币别
+ExchRate float, -- 汇率
+OutAddress Varchar(50),-- 送货地址
+SalesName Varchar(50),-- 采购人员
+Maker	Varchar(50), -- 制单人员
+DepartID Varchar(50),-- 所属部门
+Permitter Varchar(50),-- 复核人员
+ProjectID Varchar(50),-- 所属项目
+a Varchar(50),
+b Varchar(50)
+);
+
+drop table if exists cgddnr;
+-- 采购订单内容
+create table cgddnr(
+StuNo int primary key auto_increment,-- 栏号
+ProdID Varchar(50), -- 料编号
+ProdName Varchar(50),-- 物料名称
+ProdSize Varchar(50),-- 规格型号
+SUnit Varchar(50),-- 单位名称
+sQuantity Varchar(50),-- 数量
+OldPrice float,-- 折扣前单价
+Discount float,-- 折数(%)
+Amount float,-- 金额
+TaxRate float,-- 税率(%)
+TaxAmt float,-- 税额
+VFTotal float,-- 含税金额
+PreInDate Date,-- 预入库目
+QtyRemain int,-- 未入库量
+IsGift  Varchar(50),-- 赠品
+ItemRemark Varchar(50),-- 分录备注
+TranType Varchar(50),-- 来源单别
+FromNo int,-- 来源单号
+a Varchar(50),
+b Varchar(50)
+);
+
+
+drop table if exists cgxjd
+-- 采购询价单
+create table cgxjd(
+CustomerID  Varchar(50),-- 供应商
+AddressID varchar(20),-- 供应商地址
+ValidDate Date, -- 有效日期
+PriceOfTax Date,-- 单价是否含税
+BillDate Varchar(50),-- 单据日期
+BillNO Varchar(50),-- 单据号码
+CurrID Varchar(50), -- 币别
+ExchRate float,-- 汇率
+OutAddress Varchar(50),-- 送货地址
+Maker	Varchar(50),-- 制单人员
+SalesName Varchar(50),-- 采购人员
+Permitter Varchar(50),-- 复核人员
+DepartID Varchar(50),-- 所属部门
+a Varchar(50),
+b Varchar(50)
+);
+
+
+drop table if exists cgxjd
+-- 备注
+create table bz(
+HeaderID Varchar(50),-- 表头条文
+FooterID Varchar(50),-- 表尾条文
+UserDef1 Varchar(50),-- 自定栏一
+UserDef2 Varchar(50),-- 自定栏二
+Remark Varchar(50),-- 备注
+a Varchar(50),
+b Varchar(50)
+);
+

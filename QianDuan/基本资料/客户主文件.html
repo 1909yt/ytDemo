@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<title></title>
+		
+	   <style type="text/css">
+        .auto-style1
+        {
+            width: 101%;
+        }
+        .auto-style2
+        {
+            width: 347px;
+        }
+        .auto-style3
+        {
+            width: 524px;
+        }
+        .auto-style4
+        {
+            width: 347px;
+            height: 25px;
+        }
+        .auto-style5
+        {
+            width: 524px;
+            height: 25px;
+        }
+        .auto-style6
+        {
+            width: 347px;
+            height: 20px;
+        }
+        .auto-style7
+        {
+            width: 524px;
+            height: 20px;
+        }
+        .auto-style8
+        {
+            width: 100%;
+        }
+        .auto-style9
+        {
+            height: 20px;
+        }
+        .auto-style10
+        {
+            width: 289px;
+        }
+        .auto-style11
+        {
+            width: 289px;
+            height: 20px;
+        }
+        .auto-style12
+        {
+            width: 289px;
+            height: 22px;
+        }
+        .auto-style13
+        {
+            height: 22px;
+        }
+        .auto-style14
+        {
+            width: 289px;
+            height: 25px;
+        }
+        .auto-style15
+        {
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4">
+                  人员编号  <input id="RYbinahao" type="text"  />                   
+&nbsp;&nbsp;&nbsp;                  
+                </td>
+                <td class="auto-style5">
+                    所属部门<input id="suoshuBumen"  type="text"/>                  
+&nbsp;                
+&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    人员姓名 <input id="renyuanxingming" type="text" />
+                  
+&nbsp;&nbsp;&nbsp;
+                    
+                </td>
+                <td class="auto-style7">
+                    性别&nbsp;&nbsp;&nbsp; <select id="Select1">
+                    <option>男</option>
+                         <option>女</option>
+                </select>
+&nbsp;&nbsp;&nbsp;
+                    
+&nbsp; </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    英文姓名<input id="yingwengxingming" type="text" />
+                </td>
+                <td class="auto-style3">
+                    身份证号<input id="sfzhm" type="text" />
+                </td>
+            </tr>
+        </table>
+       <div>
+       	<ul class="nav nav-tabs">
+       		<li class="active"><a href="#home1" data-toggle="tab">基本资料</a></li>
+       		<li><a href="#home2" data-toggle="tab">其它资料</a></li>
+       		<li><a href="#home3" data-toggle="tab">通讯资料</a></li>
+       		<li><a href="#home4" data-toggle="tab">备注</a></li>
+       	 
+       		
+       		
+       	</ul>
+       	
+       </div>
+       <div class="tab-content">
+  <div class="tab-pane active" id="home1">
+        <table class="auto-style8">
+            <tr>
+                <td class="auto-style10">
+                   出生日期<input id="renyuanbianhao" type="text" />             
+&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    政治面貌<input id="zhengzhimianmao" type="text"/>              
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">
+                    婚烟状况<select id="Select2">
+                    <option>未婚</option>
+                   <option>已婚</option>
+                    <option>离婚</option>
+                     <option>丧偶</option>
+                </select>   
+&nbsp;&nbsp;&nbsp;
+&nbsp; </td>
+                <td class="auto-style9">
+            入职时间<input id="ruzhishijian" type="text" />                  
+&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">
+                    血型&nbsp;&nbsp; <select id="Select3">
+                         <option>A型</option>
+                         <option>B型</option>
+                         <option>AB型</option>
+                         <option>O型</option>
+                         <option>RH+型</option>
+                         <option>RH-型</option>
+                </select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="auto-style9">
+                    转正日期<input id="zhuangzhengriqi" type="text" />
+&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                   籍贯  <select id="Select4">
+                    <option>湖南</option>
+                    <option>上海</option>
+                </select>
+               
+                </td>
+                <td>
+                    试用期长<input id="shiyongqichang" type="text" />个月              
+&nbsp;     
+                    </td>
+                </tr>
+            <tr>
+                <td class="auto-style12">
+                    国籍<input id="guoji" type="text" />                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="auto-style13">
+                    离职日期<input id="lizhiriqi" type="text" />
+               </td>
+            </tr>
+            <tr>
+                <td class="auto-style14">
+                    名族<select id="Select5">
+                    <option></option>
+
+                </select>
+ 
+                </td>
+                <td class="auto-style15">
+                    技术职务<input id="jishuzhiwu" type="text" />                 
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                  中文职务<input id="zhognwengzhiwu" type="text" />      
+                </td>
+                <td class="auto-style13">
+                    英文职务<input id="yingwengzhiwu" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">
+                    联系邮编<input id="lianxiyoubian" type="text" />
+                </td>
+                <td class="auto-style13">
+                    联系地址<input id="lianxidizhi" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    联系电话<input id="lianxidianhua" type="text" />
+                </td>
+                <td>
+                    移动电话<input id="yidongdianhua" type="text" />              
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input id="Button1" type="button" value="设定" />
+                    </p>
+ </div>
+ 
+  <div class="tab-pane fade" id="home2">
+    
+      
+     
+        <table class="auto-style8">
+            <tr>
+                <td class="auto-style10">
+                    电子邮件<input id="dianziyoujia" type="text" />
+                </td>
+                <td>
+                    现电话<input id="xiandianhua" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    户籍电话<input id="hujidianhua" type="text" />
+                </td>
+                <td>
+                    现邮编<input id="xianyoubian" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    户籍邮编<input id="hujiyoubian" type="text" />
+                </td>
+                <td>
+                    现住址<input id="xianzhuzhi" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">
+                    户籍地址<input id="hujidizhi" type="text" />    
+                </td>
+                <td class="auto-style12">
+                    紧急联系人<input id="jinjilianxiren" type="text" />    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    家庭电话<input id="jiantingdianhua" type="text" />      
+                </td>
+                <td>
+                  紧急联系邮编<input id="jingjilianxiyoubian" type="text" />   
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    家庭邮编 <input id="jiatingyoubian" type="text" />   
+                </td>
+                <td>
+                    紧急联系电话  <input id="jingjilianxidianhua" type="text" />   
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    家庭地址 <input id="jiatingzhuzhi" type="text" />   
+                  
+                </td>
+                <td>
+                    紧急联系地址 <input id="jingjilianxidizhi" type="text" />   
+
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input id="Button1" type="button" value="设定" />
+                    </p>
+     
+ </div>
+ </div>
+     
+</body>
+<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+<script type="text/javascript" src="../js/bootstrap.js" ></script>
+
+</html>

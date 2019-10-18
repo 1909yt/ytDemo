@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		  <title></title>
+		  <link rel="stylesheet" href="css/bootstrap.css" />
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 189px;
+        }
+        .auto-style2
+        {
+            height: 25px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td class="auto-style1">  客户  <input id="kehu" type="text" /> </td>   
+                   <td>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  单据日期  <input id="Text1" type="data" /></td> 
+            </tr>
+            <tr>
+                <td>
+                    送货地址<input id="songhuodizhi" type="text" />
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;  单据号码<input id="haoma" type="text" /></td>
+            </tr>
+                <tr>
+                    <td class="auto-style2">
+                        销售出货类型<input id="xiaoshou" type="text" />
+                    </td>
+                     <td class="auto-style2">
+                        币别<input id="bibie" type="text" />
+                    </td>
+                </tr>
+                  <tr>
+                      <td>
+                          单价是否含税
+                          <select id="Select1">
+                              <option></option>
+
+                          </select>
+                      </td>
+                      <td>
+                汇率 <input id="aa" type="text" />
+
+                </td>
+                  </tr>
+   <tr>
+       <td>
+           仓库<input id="ss" type="text" />       </td>
+       <td>国外贸易<input id="ssa" type="text" /></td>
+   </tr>
+            <tr>
+                <td>凭证编号<input id="ssaa" type="text" /></td>
+            </tr>
+        </table>
+        <!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">内容</a></li>
+  <li><a href="#profile" data-toggle="tab">账款</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+  	<table style="width: 70%;"border="1">
+  		<tr>
+  			<td>
+  				(栏位)
+  			</td>
+  			<td>(物料名称)</td>
+  		<td>(规格型号)</td>
+  		<td>(单位名称)</td>
+  		<td>数量</td>
+  		<td>折扣前单价</td>
+  		  		<td>(折数(%))</td>
+  		  		<td>(单价))</td>
+  		</tr>
+  		<tr>
+  			<td>物料编号</td>
+  		</tr>
+  	</table>
+  </div>
+  
+  <div class="tab-pane" id="profile">
+<table>
+	<tr>
+		<td>
+			  	账款归属<input id="viopjv" type="text" />
+		</td>
+		<td>
+			付款日期<input id="asdasdasd" type="date"/>
+		</td>
+	</tr>
+	<tr>
+		<td>付款条件<input id="sadasdacascx" type="text"></td>
+				<td>账款月份<input id="asdasvreg" type="date"></td>
+	</tr>
+</table>
+  </div>
+ 
+  </div>
+</div>
+    </div>
+    </form>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <div>
+        <table>
+            <tr>
+                <td>
+                        采购人员<input id="wo" type="text" />
+                </td>
+                <td>制单人员 <input id="si" type="text" /></td>
+            </tr>
+            <tr>
+                <td>所属部门<input id="saps" type="text" /></td>
+                <td>复核人员<input id="ins" type="text" /></td>
+            </tr>
+            <tr>
+                <td>
+                    所属项目<input id="als" type="text" />
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+    <p>
+        <input id="Button1" type="button" value="查询" />&nbsp;&nbsp;
+    </p>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+</html>

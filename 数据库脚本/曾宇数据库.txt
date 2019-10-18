@@ -1,0 +1,189 @@
+﻿
+drop table if exists DiaoBodan;
+-- 调拨单主表
+create table DiaoBodan(
+MoveNo int not null PRIMARY key ,-- 单据号码
+WareOutID varchar(50) not null ,-- 调出仓库
+MoveDate datetime not null ,-- 单据日期
+WareID varchar(50) not null ,-- 单据日期
+MareName varchar(50) not null ,-- 制单人员
+Permitter varchar(50) not null ,-- 复核人员
+Udef1 varchar(50) not null ,-- 自定栏一
+Udef2 varchar(50) not null ,-- 自定栏二
+Remark varchar(50) not null ,-- 备注
+ShenHe varchar(50),-- 审核状态
+ShenHeren varchar(50),-- 审核人
+ShenHetime varchar(50),-- 审核时间
+One varchar(50) -- 一
+)
+drop table if exists DiaoBodanXB;
+-- 调拨单详表
+create table DiaoBodanXB(
+SerNo int not null PRIMARY Key,-- 栏号
+ProdID varchar(50) not null,-- 物料编号
+PrrodName varchar(50) not null,-- 物料名称
+ProdSize varchar(50) not null,-- 规格型号
+Unit varchar(50) not null,-- 单位
+Quantity varchar(50) not null,-- 数量
+HaveBatch varchar(50) not null,-- 批号
+ItemRemark varchar(50) not null,-- 分录备注
+One varchar(50) -- 一
+)
+drop table if exists Pandiandan;
+-- 盘点单主表
+create table Pandiandan(
+BillNo int not null PRIMARY key,-- 单据号码
+WareID varchar(50) not null,-- 盘点仓库	
+AdjustDate datetime not null,-- 单据日期
+IncSubjectID varchar(50) not null,-- 单据日期
+DecSubjectID varchar(50) not null,-- 减值科目
+VoucherNo varchar(50) not null,-- 凭证编号
+SalesID varchar(50) not null,-- 盘点人员
+Maker varchar(50) not null,-- 制单人员
+DepaetID varchar(50) not null,-- 所属部门
+Permitter varchar(50) not null,-- 复核人员
+ShenHe varchar(50),-- 审核状态
+ShenHeren varchar(50),-- 审核人
+ShenHetime varchar(50),-- 审核时间
+One varchar(50) -- 一
+)
+drop table if exists PandiandanXB;
+-- 盘点单详表
+create table PandiandanXB(
+SerNo int not null PRIMARY key, -- 栏号
+ProdID int not null, -- 物料编号
+ProdName varchar(50) not null, -- 物料名称
+PordSize varchar(50) not null, -- 规格型号
+Unit varchar(50) not null, -- 单位
+CurQty int not null, -- 账面数量
+CheckQty int not null, -- 盘点数量
+Quantity int not null, -- 盈亏数量
+Price float not null, -- 单价
+Amount  int not null, -- 盈亏数量
+HaveBatch  int not null, -- 批号
+ItemRemark varchar(50) not null, -- 原因
+one varchar(50) -- 一
+)
+drop table if exists Tiaojiadan;
+-- 调价单主表
+create table Tiaojiadan(
+BillNo int not null PRIMARY key,-- 单据号码
+AdjustDate datetime not null,-- 单据号码
+IncSubjectID varchar(50) not null,-- 增值科目
+VoucherNo varchar(50) not null,-- 凭证编号
+DecSujectID varchar(50) not null,-- 减值科目
+Tiaozheng varchar(50) not null,-- 调整方式
+Maker varchar(50) not null,-- 制单人员
+Permitter varchar(50) not null,-- 制单人员
+UDef1 varchar(50) not null,-- 制单人员
+UDf2 varchar(50) not null,-- 制单人员
+ShenHe varchar(50),-- 审核状态
+ShenHeren varchar(50),-- 审核人
+ShenHetime varchar(50),-- 审核时间
+one varchar(50) ,-- 一
+)
+drop table if exists TiaojiadanXB;
+-- 调价单详表
+create table TiaojiadanXB(
+SerNo int not null PRIMARY key,-- 栏号
+ProdID int not null,-- 物料编号
+ProdName varchar(50) not null,-- 物料名称
+ProdSize  varchar(50) not null,-- 规格型号
+Unit  varchar(50) not null,-- 单位
+CurQty int not null,-- 库存量 	
+LcostAvg float not null,-- 平均成本
+Price float not null,-- 单价
+Amount float not null,-- 调价金额
+ItemRemark varchar(50) not null,-- 分录备注
+One varchar(50)-- 一
+)
+drop table if exists KuCunTaiZhang;
+-- 库存台账
+create table KuCunTaiZhang(
+CangkuQuian varchar(50) not null,
+WuliaoQujian  varchar(50) not null,
+RiqiQujian  varchar(50) not null,
+One  varchar(50) 
+)
+drop table if exists KuCunDaizhi;
+-- 库存呆滞
+create table KuCunDaizhi(
+WuliaoQujian varchar(50) not null ,-- 仓库区间
+Wuliaoleibie varchar(50) not null ,-- 物料区间
+Riqi varchar(50) not null ,-- 日期区间
+Daizhiriqi datetime not null ,-- 呆滞计算日期
+one varchar(50) -- 一
+)
+drop table if exists BuMenWeihu;
+-- 部门维护
+create table BuMenWeihu( 
+DepartID int not null PRIMARY key, -- 部门编号
+DepartName varchar(50) not null,-- 部门名称
+EngName varchar(50) not null,-- 英文名称
+Memo varchar(50) not null,-- 备注
+One varchar(50) -- 一
+)
+drop table if exists RenyuanWeihu;
+-- 人员维护
+create table RenyuanWeihu(
+PersonID int not null PRIMARY key,-- 人员编号
+DepartID varchar(50) not null,-- 所属部门
+PersonName varchar(50) not null,-- 人员姓名
+Sex varchar(50),-- 性别
+EngName varchar(50),-- 英文姓名
+Idcard int ,-- 身份证号
+Birthday varchar(50),-- 出生日期 
+Polity varchar(50),-- 政治面貌
+Hyzk varchar(50),-- 婚姻状况
+RZRQ datetime,-- 入职日期
+XueX varchar(50),-- 血型
+ZZtime datetime,-- 转正日期
+JG varchar(50),-- 籍贯
+Shiyongqz varchar(50),-- 试用期长 
+Guoji varchar(50),-- 国籍
+Lizhitime datetime,-- 离职日期
+MingZu varchar(50),-- 名族
+JishuZZ varchar(50),-- 技术职称
+ZhongwenZZ varchar(50),-- 中文职务
+YingwneZZ varchar(50),-- 英文职务
+LianxiYB varchar(50),-- 联系邮编
+LianxiDZ varchar(50),-- 联系地址
+LianxiDH varchar(50),-- 联系电话
+YidongDH varchar(50),-- 移动电话
+ZuigaoXL varchar(50),-- 最高学历
+Daozhitime datetime,-- 到职日期
+XueWei varchar(50),-- 学位
+Rujintime varchar(50),-- 入境日期
+BiyeXX varchar(50),-- 毕业学校
+HuzhaoHM varchar(50),-- 护照号码
+SuoXueZY varchar(50),-- 所学专业
+Hetongqishitime datetime ,-- 合同起始日期
+Hetongzhongzhitime datetime,-- 合同终止日期
+WaiyuSP varchar(50),-- 外语水平
+Tijiantime varchar(50),-- 体检日期
+HetongQi varchar(50),-- 合同期
+DianziYJ varchar(50),-- 电子邮件
+XianDH varchar(50),-- 现电话
+HujiDH varchar(50),-- 户籍电话
+XianYB varchar(50),-- 现邮编
+HujiYB varchar(50),-- 户籍邮编
+XianZZ varchar(50),-- 现住址
+HujiDZ varchar(50),-- 户籍地址
+JinjiLXR varchar(50),-- 紧急联系人
+JiatingDH varchar(50),-- 家庭电话
+JinjiLXYB varchar(50),-- 紧急联系邮编
+JiatingYB varchar(50),-- 家庭邮编
+JinjiLXDH varchar(50),-- 紧急联系电话
+JiatingZZ varchar(50),-- 家庭住址
+JinjiLXDZ varchar(50),-- 紧急联系地址
+ZDLY varchar(50),-- 自定栏一
+ZDLE varchar(50),-- 自定栏二
+ZDLS varchar(50),-- 自定栏三
+ZDLSi varchar(50),-- 自定栏四
+ZDW varchar(50),-- 自定栏无
+ZDLL varchar(50), -- 自定栏六
+BeiZhu varchar(50),-- 备注
+one varchar(50)-- 一
+)
+
+

@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+	</head>
+	
+	
+	<style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2
+        {
+            width: 379px;
+        }
+        .auto-style3
+        {
+            width: 379px;
+            height: 20px;
+        }
+        .auto-style4
+        {
+            height: 20px;
+        }
+        .auto-style5
+        {
+            width: 378px;
+            height:19px;
+        }
+        /*内容*/
+         .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+     	/*备注*/
+     	 .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2
+        {
+            width: 410px;
+        }
+        #TextArea1
+        {
+            height: 188px;
+            width: 320px;
+        }
+     	/*账款*/
+     	 .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2
+        {
+            width: 400px;
+        }
+        .auto-style3
+        {
+            width: 400px;
+            height: 25px;
+        }
+        .auto-style4
+        {
+            height: 25px;
+        }
+     	 
+    </style>
+	<body>
+		<form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td >供应商&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input id="txtgongyingshang" type="text" style="width:240px" runat="server" />
+                </td>
+                <td>单据日期&nbsp;&nbsp; 
+                     <input id="txtdanjuRQ" type="date" style="width:240px" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">供应商地址 <input id="gongyingdz1" type="text" style="width:50px" runat="server" /> 
+                   <input id="gongyingdz2" type="text" style="width:180px" runat="server" />
+                </td>
+                <td class="auto-style4">单据号码&nbsp;&nbsp; 
+                    <input id="txtDanJuHaoMa" type="text" style="width:240px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">采购入库类型&nbsp; 
+                     <input id="txtRuKuleixing" type="text" style="width:240px" />
+                </td>
+                <td class="auto-style4">币别&nbsp;&nbsp;&nbsp;&nbsp; 
+                     <input id="txtBiBie" type="text" style="width:240px" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">单价是否含税&nbsp; 
+                    <select id="SFhanshui" style="width:240px">
+                        <option></option>
+                        
+                    </select>
+                </td>
+                <td class="auto-style4">汇率&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input id="txtHuiLuv" type="text" style="width:240px" />
+                   
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">仓库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="txtCangku" type="text" style="width:240px" />
+                </td>
+                <td class="auto-style4">国外贸易&nbsp;&nbsp;
+                    <select id="dpdMaoYi" style="width:240px">
+                        <option></option>
+
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">凭证编号&nbsp;&nbsp;&nbsp; 
+                    <input id="txtPingZhengBH" type="text" style="width:240px" />
+                    
+                </td>
+                <td class="auto-style4">
+                    <input id="ckbFuHei" type="checkbox" text="111" /> 复核后自动生成发票</td>
+            </tr>
+        </table>
+    
+    </div>
+        <table align="center" class="auto-style1">
+        	<tr>
+        		<td>
+           <ul class="nav nav-tabs">
+			  <li><a href="#home" data-toggle="tab">内容</a></li>
+			  <li><a href="#profile" data-toggle="tab">账款</a></li>
+			  <li><a href="#messages" data-toggle="tab">备注</a></li>
+			  <!--<li><a href="#settings" data-toggle="tab">Settings</a></li>-->
+			</ul>
+			<div class="tab-content">
+				<!--
+                	内容
+                -->
+			  <div class="tab-pane active" id="home">
+			  	 <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td>
+                    <table align="center" class="auto-style1">
+                        <tr>
+                            <td>(栏号)</td>
+                             <td>物料编号</td>
+                             <td>(物料名称)</td>
+                             <td>(规格型号)</td>
+                             <td>(单位名称)</td>
+                             <td>数量</td>
+                             <td>折扣前单价</td> 
+                             <td>折数(%)</td> 
+                             <td>单价</td> 
+                             <td>金额</td> 
+                             <td>税率(%)</td> 
+                             <td>(税额)</td> 
+                             <td>含税金额</td>
+                              <td>(批号)</td> 
+                             <td>赠品</td> 
+                             <td>(发票明细)</td>
+                            <td>(未开票数量)</td> 
+                             <td>分录备注</td> 
+                             <td>(来源单别)</td>
+                            <td>(来源单号)</td> 
+                             <td>(来源单别)</td>
+                            <td>(分摊费用)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    </form>
+			  	
+			  </div>
+			  <!--账款 -->
+			  <div class="tab-pane" id="profile">
+			  	 <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">账款归属&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input id="txtgongyings" type="text" style="width:240px" runat="server" />
+                </td>
+                <td>付款日期&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input id="txtfukuanRQ" type="date" style="width:240px" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">付款条件&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <output>
+                        <select>
+
+                        </select>
+                    </output>
+                    <input id="fukuanTshu"  type="text" style="width:200px" runat="server" />天</td>
+                <td class="auto-style4">账款月份&nbsp;&nbsp;&nbsp;&nbsp; 
+                     <input id="zhangkuanYF" type="date" style="width:240px" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+			  	
+			  </div>
+			  <!--备注 -->
+			  <div class="tab-pane" id="messages">
+			   <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">自定栏一&nbsp;&nbsp;&nbsp;&nbsp; <select id="SFhanshui">
+                        <option></option>
+
+                    </select>
+                   
+                </td>
+                <td>自定栏二&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <select id="dpdlSFhanshui0">
+                        <option></option>
+
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;备注&nbsp;&nbsp; 
+                    <br />
+&nbsp;&nbsp;
+                    <textarea id="TextArea1" name="S1" cols="20" rows="2"></textarea></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+			  </div>
+			  <div class="tab-pane" id="settings"></div>
+			</div>
+			</td>
+			</tr>
+        </table>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style5">采购人员&nbsp;&nbsp;&nbsp;   <input id="txtPingZhengBH0" type="text" style="width:240px" />
+                </td>
+                <td>制单人员&nbsp;&nbsp; 
+                     <input id="txtPingZhengBH1" type="text" style="width:240px" />
+                  
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">所属部门&nbsp;&nbsp;&nbsp; 
+                     <input id="suoshuBuMeng" type="text" style="width:240px" />
+                </td>
+                <td>复核人员&nbsp;&nbsp; 
+                    <input id="txtPingZhengBH3" type="text" style="width:240px" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">所属项目&nbsp;&nbsp;&nbsp;
+                      <input id="txtPingZhengBH4" type="text" style="width:240px" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <select id="dpdlSFhanshui0">
+                        <option ></option>
+
+                    </select>
+                  
+&nbsp;
+                      <select id="dpdlSFhanshui1">
+                        <option></option>
+
+                    </select>
+&nbsp;
+                    <select id="dpdlSFhanshui2">
+                        <option></option>
+
+                    </select>
+                    
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.js" ></script>
+	
+</html>

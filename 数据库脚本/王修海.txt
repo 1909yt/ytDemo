@@ -1,0 +1,131 @@
+
+
+-- 销售报价表
+drop table if exists Quotation; -- 删除再增
+create table Quotation(
+BillNO varchar(50) ,-- 单据号码
+BillDate date,-- 单据日期
+FormalCust float,-- 正式客户
+CustomerID varchar(50),-- 客户
+CustAreaID varchar(50),-- 地区
+CustAreaName varchar(50),-- 地区名称
+ValidDate date,-- 有效日期
+PriceOfTax float,-- 单价是否含税
+CurrID varchar(50),-- 币别
+ExchRate double,-- 汇率
+SalesID varchar(50),-- 业务人员
+Rermitter varchar(50),-- 制单人员
+DepartID varchar(50),-- 所属部门
+Permitter varchar(50),-- 复核人员
+Beiyong varchar(50),-- 备用
+)
+
+
+
+-- 销售报价单详表
+drop table if exists Quotaxiang; -- 删除再增
+create table Quotaxiang(
+SerNO int,-- 栏号
+ProdID  varchar(50),-- 物料编号
+ProdName varchar(50),-- 物料名称
+ProdSize varchar(50),-- 规格型号
+Sunit varchar(50),-- 单位名称
+sQuantity int,-- 数量
+OldPrice double,-- 折扣前单价
+Discount double,-- 折数
+sPrice double,-- 单价
+Amount double,-- 金额
+TaxRate double,-- 税率
+TaxAmt double,-- 税额
+VFTotal double,-- 含税金额
+IsGift Float,-- 赠品
+ItemRemark varchar(50),-- 分录备注
+beiyong varchar(50),-- 备用
+)
+
+
+-- 销售订单表
+drop table if exists Xiaoshoudingd; -- 删除再增
+create table Xiaoshoudingd(
+BillNO Varchar(50), -- 单据号码
+BillDate Date, -- 单据日期
+FormalCust Varchar(50), -- 销售订单类型
+CustomerID Varchar(50), -- 客户
+CustAreaID Varchar(50), -- 地区
+CustAreaName Varchar(50), -- 地区名称
+ValidDate date, -- 有效日期
+PriceOfTax float, -- 单价是否含税
+CustBillNo Varchar(50), -- 客户订单
+BillStatus Varchar(50), -- 单况
+CurrID Varchar(50), -- 币别
+ExchRate double, -- 汇率
+SalesID Varchar(50), -- 业务人员
+Rermitter Varchar(50), -- 制单人员
+DepartID Varchar(50), -- 所属部门
+Permitter Varchar(50), -- 复核人员
+Beiyong Varchar(50), -- 备用
+)
+
+-- 销售订单子表
+drop table if exists Xiaoshouzhi; -- 删除再增
+create table Xiaoshouzhi(
+SerNO int, -- 栏号
+ProdID Varchar(50), -- 物料编号
+ProdName Varchar(50), -- 物料名称
+ProdSize Varchar(50), -- 规格型号
+Sunit Varchar(50), -- 单位名称
+sQuantity int, -- 数量
+OldPrice double, -- 折扣前单价
+Discount double, -- 折数
+sPrice double, -- 单价
+Amount double, -- 金额
+TaxRate double, -- 税率
+TaxAmt double, -- 税额
+VFTotal double, -- 含税金额
+IsGift float, -- 赠品
+ItemRemark Varchar(50), -- 分录备注
+beiyong Varchar(50), -- 备用
+PreInDate Date, -- 预出库日
+QtyRemain double, -- 未出数量
+TranType Varchar(50), -- 来源单别
+HasCombine Float, -- 物料组合
+FromNO Varchar(50), -- 来源单号
+IsManu Float, -- 生产
+ArrangeNO Varchar(50), -- 排程单号
+ManuQty double, -- 已生产数量
+cheshi Varchar(50), -- 测试
+)
+
+-- 其它入库
+drop table if exists Qitaruku; -- 删除再增
+create table Qitaruku(
+BillStyeID Varchar(50), -- 入库类型
+AdjustDate date, -- 单据日期
+WareID Varchar(50), -- 仓库
+BillNo Varchar(50), -- 单据号码
+VoucherNO Varchar(50), -- 凭证编号
+SalesID Varchar(50), -- 入库人员
+Maker Varchar(50), -- 制单人员
+DepartID Varchar(50), -- 所属部门
+Permitter Varchar(50), -- 复核人员
+)
+
+
+
+-- 其它入库降表
+drop table if exists Qitarukuxiang; -- 删除再增
+create table Qitarukuxiang(
+SerNO int, -- 栏号
+ProdID Varchar(50), -- 物料编号
+ProdName Varchar(50), -- 物料名称
+ProdSize Varchar(50), -- 规格型号
+Sunit Varchar(50), -- 单位
+sQuantity int, -- 数量
+sPrice double, -- 单价
+Amount double, -- 金额
+BatchID floay, -- 批号
+ItemRemark Varchar(50), -- 分录备注
+)
+
+
+

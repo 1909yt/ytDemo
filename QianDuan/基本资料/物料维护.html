@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		   <style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        #Text1
+        {
+            width: 245px;
+        }
+        .auto-style2
+        {
+        }
+        #Text2
+        {
+            width: 245px;
+        }
+        #Text3
+        {
+            width: 245px;
+        }
+        #Text4
+        {
+            width: 245px;
+        }
+        #Text5
+        {
+            width: 245px;
+        }
+        #Text6
+        {
+            width: 245px;
+        }
+        #Text7
+        {
+            width: 245px;
+        }
+        #Text8
+        {
+            width: 245px;
+        }
+        #Text9
+        {
+            width: 245px;
+        }
+        #Text10
+        {
+            width: 249px;
+            margin-left: 0px;
+        }
+        #Select1
+        {
+            width: 263px;
+        }
+        #Text11
+        {
+            width: 245px;
+        }
+        #Select2
+        {
+            width: 253px;
+        }
+        #Text12
+        {
+            width: 246px;
+        }
+        .auto-style3
+        {
+            height: 25px;
+        }
+        #Text13
+        {
+            width: 256px;
+        }
+        #Text14
+        {
+            width: 246px;
+        }
+        #Text15
+        {
+            width: 259px;
+        }
+        #Text16
+        {
+            width: 246px;
+        }
+        #Text17
+        {
+            width: 251px;
+            margin-left: 0px;
+        }
+        #Text18
+        {
+            width: 246px;
+        }
+        #Text19
+        {
+            width: 251px;
+        }
+        #Text20
+        {
+            width: 251px;
+        }
+        #Select3
+        {
+            width: 60px;
+        }
+        #Select4
+        {
+            width: 60px;
+        }
+        #Sheding
+        {
+            width: 66px;
+        }
+        #GongNeng
+        {
+            width: 66px;
+        }
+        .auto-style4
+        {
+            height: 21px;
+        }
+        
+        /*基本资料*/
+          .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        #FZreng
+        {
+            width: 231px;
+        }
+        .auto-style2
+        {
+            width: 401px;
+        }
+        .auto-style3
+        {
+            width: 401px;
+            height: 25px;
+        }
+        .auto-style4
+        {
+            height: 25px;
+        }
+        #LXreng
+        {
+            width: 234px;
+        }
+        #YWryuan
+        {
+            width: 235px;
+        }
+        #SWdengjihao
+        {
+            width: 235px;
+        }
+        #ZBer
+        {
+            width: 233px;
+        }
+        #Text17
+        {
+            width: 238px;
+        }
+        #DZemail
+        {
+            width: 234px;
+        }
+        #WZ
+        {
+            width: 235px;
+        }
+        #CZhaoma
+        {
+            width: 237px;
+        }
+        #LXdianhyi
+        {
+            width: 230px;
+        }
+        #LXdianhauer
+        {
+            width: 230px;
+        }
+        #LXdianhsan
+        {
+            width: 228px;
+        }
+        #YDPhone
+        {
+            width: 226px;
+        }
+        #YHzhanghao
+        {
+            width: 226px;
+        }
+        #KHyingxing
+        {
+            width: 223px;
+        }
+        #Select1
+        {
+            width: 239px;
+        }
+        #Select2
+        {
+            width: 241px;
+        }
+    </style>
+	</head>
+	<body>
+	 <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">物料编号&nbsp;&nbsp; 
+                    <input id="WuliaoBH" type="text" /></td>
+                <td>&nbsp;物料类别&nbsp;&nbsp; 
+                    <input id="WuLiaoLeiBie" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style4">物料名称&nbsp;&nbsp; 
+                    <input id="WuLiaoName" type="text" /></td>
+                <td class="auto-style4">计量单位&nbsp;&nbsp; 
+                    <input id="JLdanwei" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">规格型号&nbsp;&nbsp; 
+                    <input id="GGxinghao" type="text" /></td>
+                <td>条形码编号&nbsp; 
+                    <input id="TXbianhao" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">英文品名&nbsp;&nbsp; 
+                    <input id="YWpingming" type="text" /></td>
+            </tr>
+        </table>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style5">
+                    <!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+				  <li><a href="#home" data-toggle="tab">基本资料</a></li>
+				  <li><a href="#profile" data-toggle="tab">存量总信息</a></li>
+				  <li><a href="#messages" data-toggle="tab">交易资料</a></li>
+				  <li><a href="#settings" data-toggle="tab">物料描述</a></li>
+				</ul>
+				
+				<!-- 基本资料 -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="home">
+				  	 <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">建议售价&nbsp; 
+                <input id="FZreng" type="text" /></td>
+                <td>使用币别&nbsp;&nbsp;&nbsp; 
+                <input id="YWryuan" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">售价A&nbsp;&nbsp;&nbsp; 
+                <input id="LXreng" type="text" /></td>
+                <td class="auto-style4">物料形态&nbsp;&nbsp;&nbsp;
+                    <select id="Select1" name="D1">
+                        <option></option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">售价B&nbsp;&nbsp;&nbsp; <input id="LXdianhyi" type="text" /></td>
+                <td class="auto-style4">单价是否含税&nbsp;<select id="Select2" name="D2">
+                    <option></option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">售价C&nbsp;&nbsp;&nbsp; <input id="LXdianhauer" type="text" /></td>
+                <td class="auto-style4">税目&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input id="Text17" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">售价D&nbsp;&nbsp;&nbsp; <input id="LXdianhsan" type="text" /></td>
+                <td class="auto-style4">税率(%)&nbsp;&nbsp;&nbsp; 
+                <input id="DZemail" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">售价E&nbsp;&nbsp;&nbsp; <input id="YDPhone" type="text" /></td>
+                <td class="auto-style4">采购提前期&nbsp;&nbsp; 
+                <input id="WZ" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">标准进价&nbsp; <input id="YHzhanghao" type="text" /></td>
+                <td class="auto-style4">主供应商&nbsp;&nbsp;&nbsp; 
+                <input id="CZhaoma" type="text" /></td>
+            </tr>
+            </table>
+    
+    </div>
+				  </div>
+				  <!-- 存量总信息 -->
+				  <div class="tab-pane" id="profile">
+				  	 <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style3">期初设定</td>
+                <td class="auto-style4">当前信息</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">安全存量&nbsp;&nbsp; 
+                    <input id="AQcunliang" type="text" /></td>
+                <td>低于安全存量&nbsp;&nbsp; 
+                    <input id="DYanquancunl" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">期初总数量&nbsp; 
+                    <input id="QCzongshul" type="text" /></td>
+                <td class="auto-style4">现有总数量&nbsp;&nbsp;&nbsp; 
+                    <input id="XYzongshul" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">平均成本&nbsp;&nbsp; 
+                    <input id="PJchengben" type="text" /></td>
+                <td>现行平均成本&nbsp;&nbsp; 
+                    <input id="XXpingjunCB" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">标准成本&nbsp;&nbsp; 
+                    <input id="BZchengben" type="text" /></td>
+                <td>标准总成本&nbsp;&nbsp;&nbsp; 
+                    <input id="BZzongCB" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">期初总成本&nbsp; 
+                    <input id="QCzongCB" type="text" /></td>
+                <td class="auto-style4">现行总成本&nbsp;&nbsp;&nbsp; 
+                    <input id="XXzongCB" type="text" /></td>
+            </tr>
+        </table>
+    
+    </div>
+				  </div>
+				  <!-- 交易资料 -->
+				  <div class="tab-pane" id="messages">
+				  	<div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">期初设定</td>
+                <td>当前信息</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">最初出库日&nbsp;&nbsp; 
+                    <input id="ZCchukuR" type="date" /></td>
+                <td>最近出库日&nbsp;&nbsp; 
+                    <input id="zuijinchukuR" type="date" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">最初入库日&nbsp;&nbsp; 
+                    <input id="ZCRuKuR" type="date" /></td>
+                <td>最近入库日&nbsp;&nbsp; 
+                    <input id="zuijinRuKuR" type="date" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">呆滞起计数&nbsp;&nbsp; 
+                    <input id="DZqijishu" type="text" /></td>
+                <td>停用日期&nbsp;&nbsp;&nbsp; 
+                    <input id="TYrqi" type="date" /></td>
+            </tr>
+        </table>
+    
+    </div>
+				  </div>
+				  <!-- 物料描述 -->
+				  <div class="tab-pane" id="settings">
+				  	 <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">自定栏一&nbsp;&nbsp; 
+                    <select id="ZDlanyi" name="D1">
+                        <option></option>
+                    </select></td>
+                <td>自定栏二&nbsp;&nbsp;       
+                    <select id="ZDlaner" name="D2">
+                        <option></option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">备注&nbsp;&nbsp; 
+                    <textarea id="textWLshuoming" name="S1"></textarea></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    
+				  </div>
+				</div></td>
+            </tr>
+        </table>
+    
+    </div>
+    </form>
+    <table align="center" class="auto-style1">
+        <tr>
+            <td class="auto-style3">使用批号设定</td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <input id="ckbPHguanli" type="checkbox" />使用批号管理 
+                <input id="ckbSYchuccangRQ" type="checkbox" />使用出厂日期 
+                <input id="ckbYXRQ" type="checkbox" />使用有效日期 有效天数 
+                <input id="ckbYXtianshu" type="text" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <select id="Sheding" name="D3">
+                    <option></option>
+                </select>&nbsp;
+                <select id="GongNeng" name="D4">
+                    <option></option>
+                </select></td>
+        </tr>
+    </table>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.js" ></script>
+</html>

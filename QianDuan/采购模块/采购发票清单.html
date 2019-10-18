@@ -1,0 +1,136 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td>&nbsp;供应商&nbsp;&nbsp;
+        <input id="Text1" type="text"runat="server">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 单据日期&nbsp;
+        <input id="Text2" type="text" runat="server">
+
+    
+                    <br />
+                    <br />
+                    单据类型&nbsp;
+     <input id="Text3" type="text"" runat="server">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 单据号码
+        <input id="Text4" type="text"runat="server">
+
+    
+    &nbsp;<br />
+                    <br />
+                    单价是否含税&nbsp; <input id="Text5" type="text"runat="server">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 发票号码
+        <input id="Text6" type="text" runat="server">
+
+    
+    &nbsp;
+                    <br />
+                    <br />
+                    采购核对状态&nbsp;     <input id="Text7" type="text"  runat="server">
+
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发票类型
+        <input id="Text8" type="text" runat="server">
+
+    
+    &nbsp;<br />
+                    <br />
+&nbsp; 凭证编号&nbsp;&nbsp;
+        <input id="Text9" type="text"  runat="server">&nbsp;&nbsp;&nbsp;
+
+币别     <input id="Text10" type="text"  runat="server">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 差价凭证编号    <input id="Text11" type="text"  runat="server">&nbsp;&nbsp;&nbsp;
+  汇率    <input id="Text12" type="text"  runat="server">
+                
+                    <br />
+  
+                    <br />
+                 <input id="Button1" type="button"  runat="server" value="内容" />
+                  <input id="Button2" type="button"  runat="server" value="清单"/>
+              
+                    <input id="Button5" type="button"  runat="server" value="账款"/>
+            
+                    <input id="Button6" type="button"  runat="server" value="备注"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+    <table style="width:110%;" border="1">
+        <tr>
+            <td>(栏号)</td>
+            <td>(单位)</td>
+            <td>(数量)</td>
+            <td>(单价)</td> 
+            <td>(金额)</td>
+            <td>(税率%)</td>
+            <td>(税额)</td>
+            <td>(含税金额)</td>
+            <td>(汇差)</td>
+            <td>(价差)</td>
+            <td>(差价本位币)</td>
+            <td>(差额合计)</td>
+            <td>(来源单别)</td>
+            <td>(来源单号)</td>
+            <td>(赠品)</td>
+               <td>(分录备注)</td>
+          
+        </tr>
+    </table>
+    </div>
+        <p>
+            &nbsp;</p>
+        <p><br >
+                  采购人员<input id="Text13" type="text" runat="server"></input>
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+           所属部门<input id="Text15" type="text" runat="server"></input>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+           制单人员  <input id="Text16" type="text" runat="server">
+        </p>
+        <p>
+          所属项目  <input id="Text17" type="text"  runat="server">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+           复核人员<input id="Text18" type="text" runat="server">
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <input id="Button3" type="button"  runat="server" value="查询" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="Button4" type="button" runat="server" value="转单" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="Button7" type="button" runat="server" value="功能" />
+        </p>
+    </form>
+</body>
+</html>

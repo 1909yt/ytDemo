@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>销售发票</title>
+		<meta charset="utf-8" />
+		<link href="Content/themes/default/easyui.css" rel="stylesheet"/>
+		<link href="Content/themes/icon.css" rel="stylesheet" />
+		<link href="Content/themes/wu.css" rel="stylesheet" />
+		<script src="Scripts/jquery-1.10.2.min.js"></script>
+		<script src="Scripts/jquery.easyui-1.4.5.min.js"></script>
+		<script src="Scripts/locale/easyui-lang-zh_CN.js"></script>
+		<style>
+			.bottom_xian {
+				display: inline-block;
+				font-size: 10px;
+				border-bottom: 1px solid white;
+				margin-top: 5px;
+				margin-left: 20px;
+				width: 80px;
+			}
+			
+			.bottom_lan {
+				display: inline-block;
+				font-size: 10px;
+				border-bottom: 1px solid white;
+				margin-top: -15px;
+				margin-left: 5px;
+				width: 80px;
+			}
+			
+			.tb {}
+			
+			#win {
+				line-height: 25px;
+				background-color: #d7e7ff;
+			}
+			
+			#tt {
+				margin: 0px auto;
+				margin-top: 10px;
+			}
+			
+			.left {
+				margin-left: 62px;
+			}
+			
+			.right {
+				position: relative;
+				left: 10px;
+			}
+			
+			#mb {
+				background-color: #a5c5f4;
+				margin-left: 20px;
+				margin-top: 5px;
+			}
+			
+			#da {
+				width: 610px;
+				height: 400px;
+			}
+			
+			thead > tbody > tr {
+				height: 10px;
+			}
+		</style>
+		<script>
+			$(function() {
+//				$('#win').window({
+//					onBeforeClose: function() {
+//						window.location.href = 'index.html';
+//					}
+//				});
+			})
+		</script>
+	</head>
+
+	<body>
+
+		<div id="win" class="easyui-window" title="销售发票(空白)" style="width:625px;height:550px" data-options="iconCls:'icon-save',modal:true">
+			<div id="da">
+				<div>
+					<div class="bottom_xian">客户</div>
+					<input type="text" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">单据日期</div>
+					<input type="text" class="easyui-datebox tb" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">单据类型</div>
+					<select class="easyui-combobox tb" name="dept" style="height: 20px;width: 180px;">
+                    <option value="aa"></option>
+                    <option></option>
+                </select>
+					<div class="bottom_xian">单据号码</div>
+					<input type="text" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">单价是否含税</div>
+					<select class="easyui-combobox tb" name="dept" style="height: 20px;width: 180px;">
+                    <option value="aa">含税</option>
+                    <option>未含</option>
+                </select>
+					<div class="bottom_xian">发票号码</div>
+					<input type="text" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">发票地址</div>
+					<input type="text" style="height: 20px;width: 70px;">
+
+					<input type="text" style="height: 20px;width: 105px;">
+					<div class="bottom_xian">发票类型</div>
+					<input type="text" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">销售核对状态</div>
+					<select class="easyui-combobox tb" name="dept" style="height: 20px;width: 180px;">
+                    <option value="aa"></option>
+                    <option></option>
+                </select>
+
+					<div class="bottom_xian">币别</div>
+					<input type="text" style="height: 20px;width: 180px;">
+
+					<div class="bottom_xian">凭证编号</div>
+					<input type="text" style="height: 20px;width: 180px;">
+
+					<div class="bottom_xian">汇率</div>
+					<input type="text" style="height: 20px;width: 180px;">
+				</div>
+
+				<div id="tt" class="easyui-tabs" style="width:540px;height:176px;">
+					<div title="内容" style="padding:0px;display:none;">
+
+						<table id="tt" class="easyui-treegrid" style="width:598px;height:140px" data-options="url:'get_data.php',idField:'id',treeField:'name'">
+							<thead>
+								<tr>
+									<th data-options="field:'name',width:60">（栏号）</th>
+									<th data-options="field:'persons',width:70,align:'right'">物料编号</th>
+									<th data-options="field:'begin',width:150">物料名称</th>
+									<th data-options="field:'end',width:90">（规格型号）</th>
+									<th data-options="field:'qwe',width:80">（单位名称）</th>
+									<th data-options="field:'asd',width:180">数量</th>
+									<th data-options="field:'swe',width:80">折扣前单价</th>
+									<th data-options="field:'swe',width:80">折数(%)</th>
+									<th data-options="field:'swe',width:80">单价</th>
+									<th data-options="field:'ywe',width:110">(金额)</th>
+									<th data-options="field:'yfe',width:110">税率(%)</th>
+									<th data-options="field:'dsa',width:110">(税额)</th>
+									<th data-options="field:'hwe',width:110">(含税金额)</th>
+									<th data-options="field:'ss',width:40">赠品</th>
+									<th data-options="field:'ddd',width:110">分录备注</th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2</td>
+									<td>A02002</td>
+									<td>日立台式机硬盘</td>
+									<td>日立 日立笔记本硬日立 日立台式机硬盘 250G/7200转盘</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>A01003</td>
+									<td>Intel INTEL 915PGN</td>
+									<td>Intel INTEL 915PGN</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>A03001</td>
+									<td>祺祥 6200A 钻石版</td>
+									<td>祺祥 6200A 钻石版</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>C01006</td>
+									<td>惠普 Dv1394TU</td>
+									<td>惠普 Dv1394TU</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+
+					<div title="内容" style="padding:0px;display:none;">
+
+						<table id="tt" class="easyui-treegrid" style="width:598px;height:140px" data-options="url:'get_data.php',idField:'id',treeField:'name'">
+							<thead>
+								<tr>
+									<tr>
+										<th data-options="field:'tb_billno'">原单</th>
+										<th data-options="field:'tb_line_id'">发票</th>
+									</tr>
+									<th data-options="field:'name',width:60">（栏号）</th>
+									<th data-options="field:'persons',width:70,align:'right'">物料编号</th>
+									<th data-options="field:'begin',width:150">物料名称</th>
+									<th data-options="field:'end',width:90">（规格型号）</th>
+									<th data-options="field:'qwe',width:80">（单位名称）</th>
+									<th data-options="field:'asd',width:180">数量</th>
+									<th data-options="field:'swe',width:80">折扣前单价</th>
+									<th data-options="field:'swe',width:80">折数(%)</th>
+									<th data-options="field:'swe',width:80">单价</th>
+									<th data-options="field:'ywe',width:110">(金额)</th>
+									<th data-options="field:'yfe',width:110">税率(%)</th>
+									<th data-options="field:'dsa',width:110">(税额)</th>
+									<th data-options="field:'hwe',width:110">(含税金额)</th>
+									<th data-options="field:'ss',width:40">赠品</th>
+									<th data-options="field:'ddd',width:110">分录备注</th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2</td>
+									<td>A02002</td>
+									<td>日立台式机硬盘</td>
+									<td>日立 日立笔记本硬日立 日立台式机硬盘 250G/7200转盘</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>A01003</td>
+									<td>Intel INTEL 915PGN</td>
+									<td>Intel INTEL 915PGN</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>A03001</td>
+									<td>祺祥 6200A 钻石版</td>
+									<td>祺祥 6200A 钻石版</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>C01006</td>
+									<td>惠普 Dv1394TU</td>
+									<td>惠普 Dv1394TU</td>
+									<td></td>
+									<td>7</td>
+									<td>771.33</td>
+									<td>194.47</td>
+									<td>1500.00</td>
+									<td>8974.36</td>
+									<td>17.00</td>
+									<td>1525.64</td>
+									<td>10500.00</td>
+									<td>2006/06/30</td>
+									<td>7</td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td></td>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td></td>
+									<td>0</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					<div title="账款" style="overflow:auto;padding:20px;display:none;background-color:#D7E7FF;">
+						<div class="bottom_xian">账款归属</div>
+						<input type="text" style="height: 20px;width: 140px;">
+
+						<div class="bottom_xian">结算方式一</div>
+						<input style="width:62px;"><input style="width:62px;">
+
+						<div class="bottom_xian">收款条件：</div>
+						<select class="easyui-combobox tb" name="dept" style="height: 20px;width: 50px;">
+                        <option value="aa"></option>
+                        <option></option>
+                    </select>
+						<input style="width:70px;">天
+
+						<div class="bottom_xian">结算方式二：</div>
+						<input style="width:62px;"><input style="width:62px;">
+
+						<div class="bottom_xian">收款日期</div>
+						<input type="text" class="easyui-datebox tb" style="height: 20px;width: 140px;">
+						<div class="bottom_xian">结算方式三：</div>
+						<input style="width:62px;"><input style="width:62px;">
+						<div class="bottom_xian">账款月份</div>
+						<input type="text" class="easyui-datebox tb" style="height: 20px;width: 140px;">
+					</div>
+					<div title="备注" style="overflow:auto;padding:20px;display:none;background-color:#D7E7FF;">
+						<div>
+							<div style="margin-top:10px">
+								自定义：
+								<a style="margin-left:192px">金税资料：</a>
+							</div>
+							<div style="margin-top:10px">
+								自定义一：<input style="width:110px;">
+								<a style="margin-left:68px">导出日期：</a>
+								<a style="margin-left:25px"><input type="text" class="easyui-datebox tb" style="height: 20px;width: 110px;"></a>
+							</div>
+							<div style="margin-top:10px">
+								自定义三：<input style="width:110px;">
+								<a style="margin-left:68px"> 导出人员：</a>
+								<a style="margin-left:25px"><input style="width:110px;"></a>
+							</div>
+							<div style="margin-top:10px">
+								备注<input type="text" class="left" style="width:400px; height:100px; " />
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div style="margin-top:10px">
+					<div class="bottom_xian">业务人员</div>
+					<input class="tb" type="text" value="A06     陈俊" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">制单人员</div>
+					<input class="tb" type="text" value="Admin" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">所属部门</div>
+					<input class="tb" type="text" value="04    生管部" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">复核人员</div>
+					<input class="tb" type="text" value="Admin" style="height: 20px;width: 180px;">
+					<div class="bottom_xian">所属项目</div>
+					<input class="tb" type="text" value="Admin" style="height: 20px;width: 180px;">
+				</div>
+				<div style="margin-top:10px;margin-left:20px;">
+					<select style="width:72px;height:23px;background-color:#A5C5F4">
+                    <option selected>查询</option>
+                </select>
+					<select style="width:72px;height:23px;background-color:#A5C5F4">
+                    <option selected>转单</option>
+                </select>
+					<select style="width:72px;height:23px;background-color:#A5C5F4">
+                    <option selected>功能</option>
+                </select>
+					
+				</div>
+				<div style="display:flex;justify-content:center">
+					<a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
+					<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true">取消</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

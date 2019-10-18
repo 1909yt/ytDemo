@@ -1,0 +1,158 @@
+
+--  1.应付冲款主表
+drop database if exists t_store;
+create table t_store(
+Supplier int primary key auto_increment,-- 供应商
+BillDate varchar(50) not null,-- 单据日期
+
+a varchar(50) not null,-- 方式一
+b varchar(50) not null,-- 方式二
+c varchar(50) not null,-- 方式三
+BillHaoma varchar(50) not null,-- 单据号码
+Bibie varchar(50) not null,-- 币别
+HuiLv varchar(50)  not null,-- 汇率
+Zhikoulv varchar(50) not null,--  折扣率
+Type varchar(50) not null,-- 应付冲款类型
+Month varchar(50)  not null,-- 终止帐月
+Number varchar(50)  not null,--  凭证编号
+Department varchar(50)   not null,-- 所属部门
+Staff varchar(50)   not null ,-- 所属人员
+Item varchar(50)  not null ,--  所属项目
+Reviewer varchar(50)  not null,-- 复核人员
+Customone varchar(50)  not null,-- 自定义栏1
+Customtwo varchar(50)  not null,-- 自定义栏2
+Remarks varchar(50)  not null,--  备注
+Bbb varchar(50)  not null
+
+);
+--  2.应付冲款详表
+drop database if exists tb_bei;
+create table tb_bei(
+
+Cplumn int(10) not null,-- 栏号
+
+Single varchar(50)  not null,-- 单别 
+
+SingleDate varchar(50)   not null,-- 原单日期
+
+
+
+OddNumber varchar(50)  not null ,-- 原单单号
+
+Lnvoice varchar(50)  not null, -- 发票号码
+
+Transaction varchar(50)  not null,-- 交易对象 
+
+NameTransaction varchar(50)  not null,-- 交易对象名称
+
+Department varchar(50)  not null,-- 部门编号 
+
+DepartmentName varchar(50)  not null,-- 部门名称
+
+Purchasing varchar(50)   not null,-- 采购人员
+
+EntryName varchar(50)   not null ,-- 项目名称
+
+Currency varchar(50)  not null ,-- 币别
+
+Exchange varchar(50)  not null,-- 汇率
+
+Money varchar(50)  not null,-- 原单金额
+
+Summ varchar(50)  ,-- 现行余额
+
+Zhirsum varchar(50)  ,-- 折让金额
+
+CkuanSum varchar(50)  ,-- 冲款金额
+CdiSum varchar(50)  ,-- 冲抵金额
+
+Ccc varchar(50)     -- 1111 
+
+);
+--  3、	采购发票主表
+drop database if exists Tb_fapiao;
+create table Tb_fapiao（
+Supplier int(10) not null, -- 供应商
+BillDate varchar(50) not null,-- 单据日期
+BillHaoma int(10) not null,-- 单据号码
+BillType varchar(50)   not null ,-- 单据类型
+
+FapiaoHoma varchar(50)  not null ,-- 发票号码
+
+Caig varchar(50)  not null, -- 采购核对状态
+
+FapiaoType varchar(50)  not null,-- 发票类型 
+
+Pingzhengbianhao varchar(50)  not null,-- 凭证编号
+
+Bibie varchar(50)  not null,-- 币别 
+
+Chajiabianhao varchar(50)  not null,-- 	差价凭证编号
+
+Huilv varchar(50)   not null ,-- 汇率 
+
+Caigrengyuan varchar(50)  not null ,-- 采购人员 
+
+
+Zhidanrengyuan varchar(50)  not null, -- 制单人员
+Staff varchar(50)  not null, -- 所属部门 
+Item varchar(50)  not null,-- 所属项目
+
+Reviewer varchar(50)  not null,-- 复核人员
+
+Customone varchar(50)  not null,--  自定义栏1 
+
+Customtwo varchar(50)  not null,-- 自定义栏2
+Remarks varchar(50)    ,--  备注
+
+Ddd Homa varchar(50)   -- ...
+
+）;
+--  4、	采购发票详表
+drop database if exists tb_qingdan;
+create table tb_qingdan(
+Cplumn int(10)   not null ,-- 栏号
+Wuliaobianh varchar(50)   not null ,-- 物料编号
+Wuliaomcheng varchar(50)   not null ,-- 物料名称
+Type varchar(50)   not null ,-- 规格型号 
+Danwei varchar(50)   not null ,-- 单位
+Danjia varchar(50)   not null ,-- 单价 
+Jine varchar(50)   not null ,-- 金额 
+Number varchar(50)   not null ,-- 数量
+Danj varchar(50)   not null ,-- 金额
+Je varchar(50)   not null ,-- 税率 
+Shuilv varchar(50)   not null ,-- 税额
+Shuie varchar(50)   not null ,-- 含税金额
+Hanshuije varchar(50)   not null ,-- 汇差 
+Huicha varchar(50)   not null ,-- 价差
+Jiacha varchar(50)   not null ,-- 价差本位币 
+Jiacbengweibi varchar(50)   not null ,-- 差额合计 
+Chaeheji varchar(50)   not null ,-- 来源单别 
+Laiyuandanbie varchar(50)   not null ,-- 来源单号
+Laiyuandanhao varchar(50)   not null ,-- 单别 
+Ttt varchar(50)   not null -- 2222 
+
+);
+
+--  5、	采购发票内容详表
+drop database if exists tb_nrong;
+create table tb_nrong(
+Cplumn int(10)   not null ,-- 栏号 
+Wuliaobianh varchar(50)   not null ,-- 物料编号
+Wuliaomcheng varchar(50)   not null ,-- 物料名称 
+Type varchar(50)   not null ,-- 规格型号
+DanweName varchar(50)   not null ,-- 单位名称
+Number varchar(50)   not null ,-- 数量 
+Danjia varchar(50)   not null ,-- 单价 
+Jine varchar(50)   not null ,-- 金额
+
+Shuilv varchar(50)   not null ,--  税率 
+Shuie varchar(50)   not null ,-- 税额
+Hansje varchar(50)   not null ,-- 含税金额
+Weijin varchar(50)   not null ,-- 未进数量
+
+Caigdingdanhao varchar(50)   not null ,-- 采购订单号 
+Zengping varchar(50)   ,-- 赠品
+Beizhu varchar(500)    ,-- 备注 
+Ppp varchar(50)   -- 5555 
+);

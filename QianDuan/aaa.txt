@@ -1,0 +1,16 @@
+  <div class="tab-pane" id="settings">
+  	<a href="调拨单.html">调拨单</a>
+  	<a href="盘点单.html">盘点单</a>
+  	<a href="调价单.html">调价单</a>
+  	<a href="库存台账.html">库存台账</a>
+  	<a href="库存台账明细表.html">库存进出明细表</a>
+  	<a href="库存呆滞分析表.html">库存呆滞分析表</a>
+  </div>
+   <div class="tab-pane" id="adi">
+   	<a href="销售报价.html">销售报价</a>
+  <a href="销售订单.html">销售订单</a>
+  <a href="销售出库单.html">销售出库</a>
+  <a href="销售退货单.html">销售退货</a>
+  <a href="销售发票.html">销售发票</a>
+  <a>销售排行表</a>
+   </div>

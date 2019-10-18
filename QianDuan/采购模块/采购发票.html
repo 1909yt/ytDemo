@@ -1,0 +1,186 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="qingdan.aspx.cs" Inherits="FuQian.Fapiao" %>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td>供应商
+        <input id="Text1" type="text"runat="server">
+
+     单据日期
+        <input id="Text2" type="text" runat="server">
+
+                    单据类型
+     <input id="Text3" type="text"" runat="server">
+
+单据号码
+        <input id="Text4" type="text"runat="server">
+
+                    单价是否含税&nbsp; <input id="Text5" type="text"runat="server">
+
+发票号码
+        <input id="Text6" type="text" runat="server">
+
+                    采购核对状态     <input id="Text7" type="text"  runat="server">
+
+发票类型
+        <input id="Text8" type="text" runat="server">
+ 凭证编号
+        <input id="Text9" type="text"  runat="server">
+
+币别     <input id="Text10" type="text"  runat="server">
+ 差价凭证编号    <input id="Text11" type="text"  runat="server">
+  汇率    <input id="Text12" type="text"  runat="server">
+                
+           <ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">内容</a></li>
+  <li><a href="#profile" data-toggle="tab">清单</a></li>
+  <li><a href="#messages" data-toggle="tab">账款</a></li>
+  <li><a href="#settings" data-toggle="tab">备注</a></li>
+</ul>
+
+
+<div class="tab-content">
+  <div class="tab-pane active" id="home"><table style="width:110%;" border="1">
+        <tr>
+            <td>(栏号)</td>
+            <td>(单位)</td>
+            <td>(数量)</td>
+            <td>(单价)</td> 
+            <td>(金额)</td>
+            <td>(税率%)</td>
+            <td>(税额)</td>
+            <td>(含税金额)</td>
+            <td>(汇差)</td>
+            <td>(价差)</td>
+            <td>(差价本位币)</td>
+            <td>(差额合计)</td>
+            <td>(来源单别)</td>
+            <td>(来源单号)</td>
+            <td>(赠品)</td>
+               <td>(分录备注)</td>
+          
+        </tr>
+    </table></div>
+  <div class="tab-pane" id="profile">     <table style="width:100%;" border="1">
+        <tr>
+            <td>(栏号)</td>
+            <td>(物流编号)</td>
+            <td>(物流名称)</td>
+            <td>(规格编号)</td> 
+            <td>(单位名称)</td>
+            <td>(数量)</td>
+            <td>(单价)</td>
+            <td>(金额)</td>
+            <td>(税率%)</td>
+            <td>(税额)</td>
+            <td>(含税)</td>
+            <td>(含税金额)</td>
+            <td>(未进数量)</td>
+            <td>(采购订单号)</td>
+            <td>(赠品)</td>
+               <td>(分录备注)</td>
+          
+        </tr>
+    </table></div>
+  <div class="tab-pane" id="messages">     <table style="width:100%;" border="1">
+    <div>
+
+            账款归属 <input type="text" />
+        结算方式一 <input type="text" /><br />
+        收款条件<input type="text" />
+        结算方式二<input type="text" /><br />
+         收款条件<input type="text" />天
+        结算方式二<input type="text" /><br />
+         收款日期<input type="text" />
+        结算方式三<input type="text" /><br />
+         账款月份<input type="text" /><br /><br />
+    
+
+    
+    </div>
+
+</table></div>
+  <div class="tab-pane" id="settings"> 
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">自定栏一<select id="SFhanshui">
+                        <option></option>
+
+                    </select>
+                   
+                </td>
+                <td>自定栏二
+                    <select id="dpdlSFhanshui0">
+                        <option></option>
+
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+   <textarea id="TextArea1" name="S1" cols="20" rows="2"></textarea></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    
+    </div>
+    </form></div>
+</div>
+        </table>
+
+    
+    </div>
+        <p>
+            &nbsp;</p>
+        <p><br >
+        <div style="margin-right:100px;">
+                  采购人员<input id="Text13" type="text" runat="server"></input>
+
+            <br />
+           所属部门<input id="Text15" type="text" runat="server"></input>
+
+            
+           制单人员  <input id="Text16" type="text" runat="server">
+        </p>
+        <p>
+          所属项目  <input id="Text17" type="text"  runat="server">
+
+           
+           复核人员<input id="Text18" type="text" runat="server">
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <input id="Button3" type="button"  runat="server" value="查询" />
+
+            <input id="Button4" type="button" runat="server" value="转单" />
+
+            <input id="Button7" type="button" runat="server" value="功能" />
+        </p>
+        </div>
+    </form>
+</body>
+<script type="text/javascript "src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script> 
+</html>

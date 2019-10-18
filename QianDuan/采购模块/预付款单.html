@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td>供应商
+        <input id="Text1" type="text"runat="server">
+
+ 单据日期
+        <input id="Text2" type="text" runat="server">
+
+    
+                    <br />
+                    <br />
+                    单据类型
+     <input id="Text3" type="text"" runat="server">
+
+    
+单据号码
+        <input id="Text4" type="text"runat="server">
+
+    
+   <br />
+                    <br />
+                    单价是否含税<input id="Text5" type="text"runat="server">
+
+    
+发票号码
+        <input id="Text6" type="text" runat="server">
+
+    
+  
+                    <br />
+                    <br />
+                    采购核对状态<input id="Text7" type="text"  runat="server">
+
+    
+发票类型
+        <input id="Text8" type="text" runat="server">
+<br />
+                    <br />
+凭证编号
+        <input id="Text9" type="text"  runat="server">
+
+币别     <input id="Text10" type="text"  runat="server"></br>
+ 差价凭证编号    <input id="Text11" type="text"  runat="server">
+  汇率    <input id="Text12" type="text"  runat="server">
+                
+                  <ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">内容</a></li>
+  <li><a href="#profile" data-toggle="tab">备注</a></li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">    <table style="width:110%;" border="1">
+        <tr>
+            <td>(栏号)</td>
+            <td>(单位)</td>
+            <td>(数量)</td>
+            <td>(单价)</td> 
+            <td>(金额)</td>
+            <td>(税率%)</td>
+            <td>(税额)</td>
+            <td>(含税金额)</td>
+            <td>(汇差)</td>
+            <td>(价差)</td>
+            <td>(差价本位币)</td>
+            <td>(差额合计)</td>
+            <td>(来源单别)</td>
+            <td>(来源单号)</td>
+            <td>(赠品)</td>
+               <td>(分录备注)</td>
+          
+        </tr>
+    </table></div>
+  <div class="tab-pane" id="profile"> <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">自定栏一<select id="SFhanshui">
+                        <option></option>
+
+                    </select>
+                   
+                </td>
+                <td>自定栏二
+                    <select id="dpdlSFhanshui0">
+                        <option></option>
+
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;备注
+                    <br />
+
+                    <textarea id="TextArea1" name="S1" cols="20" rows="2"></textarea></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    
+    </div>
+   </form>
+         
+        </table>
+
+
+    </div>
+        <p>
+            &nbsp;</p>
+        <p><br >
+                  采购人员<input id="Text13" type="text" runat="server"></input>
+
+           所属部门<input id="Text15" type="text" runat="server"></input>
+
+           制单人员  <input id="Text16" type="text" runat="server">
+        </p>
+        <p>
+          所属项目  <input id="Text17" type="text"  runat="server">
+
+           
+           复核人员<input id="Text18" type="text" runat="server">
+        </p>
+        
+        <p>
+            <input id="Button3" type="button"  runat="server" value="查询" />
+
+            <input id="Button4" type="button" runat="server" value="转单" />
+
+            <input id="Button7" type="button" runat="server" value="功能" />
+           
+        </p>
+    </form>
+</body>
+<script type="text/javascript "src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script> 
+</html>

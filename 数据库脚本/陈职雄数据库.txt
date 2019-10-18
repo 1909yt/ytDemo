@@ -1,0 +1,231 @@
+
+-- 采购入库
+drop table if exists tb_CaiGouRuKuD; 
+create table tb_CaiGouRuKuD(
+CustName Varchar(50)  primary key,-- 供应商
+BillDate Varchar(50), -- 单据日期
+AddrName Varchar(50),-- 供应商地址
+CustAddress Varchar(50),-- 供应商地址名称
+BillNo int ,-- 单据号码
+SeleClassID Varchar(50),-- 采购入库类型
+BiBie Varchar(50),-- 币别
+PriceofTax Varchar(50),-- 单价是否含税
+ExchRate double,-- 汇率
+WareName  Varchar(50),-- 仓库
+HasForeignTrade Varchar(50),-- 国外贸易
+HasAutoInv	Varchar(50), -- 复核后自动生成发票
+SelesID		Varchar(50),-- 采购人员
+Maker		Varchar(50),-- 制单人员
+DepartName	Varchar(50),-- 所属部门
+Permitter	Varchar(50),-- 复核人员
+ProjectName	Varchar(50),-- 所属项目
+UDef1		Varchar(50),-- 自定栏一
+UDef2		Varchar(50),-- 自定栏二
+Remark		Varchar(200),-- 备注
+a		Varchar(50),-- 备用字段
+b     	Varchar(50)  -- 备用字段二
+);
+
+-- 采购入库详表(内容)
+drop table if exists tb_CaiGouRuKuDNeiR;
+create table tb_CaiGouRuKuDNeiR(
+SerNo	int  primary key,-- 栏号
+ProdID	int,-- 物料编号
+ProdName	Varchar(50),-- 物料名称
+ProdSize	Varchar(50),-- 规格型号
+SUnit	Varchar (50),-- 单位名称
+SQuantity	int,-- 数量
+OldPrice	double, -- 折扣前单价
+Discount	double, -- 折数
+SPrice	double,	-- 单价
+Amount	double, -- 金额
+TaxRate	double, -- 税率
+TaxAmt	double, -- 税额
+AmountATax	double, -- 含税金额
+HaveBetch	Varchar(50), -- 批号
+IsGift	Varchar(50), -- 赠品
+HasInv	Varchar(50), -- 发票明细
+HotInvCount	int,	-- 未开票数量
+ItemRemark	Varchar(200), -- 分录备注
+TranType	Varchar(50), -- 来源单别
+FromNO	Varchar(50), -- 来源单号
+MLAppFare	Varchar(50), -- 分摊费用
+a	Varchar(50), -- 备用字段
+b       Varchar(50)  -- 备用字段二
+);
+
+
+-- 采购退货
+drop table if exists tb_CaiGouTuiHuo;
+create table tb_CaiGouTuiHuo(
+CustName	Varchar (50), -- 供应商
+BillDate	Varchar(50), -- 单据日期
+AddrID         Varchar (50), -- 供应商地址
+CustAddress	Varchar (50), -- 供应商地址名称
+BillNo		int  primary key,		-- 单据号码
+CurrID		Varchar (50),	-- 币别
+PriceofTax	Varchar (50), -- 单价是否含税
+ExchRate	double,	-- 汇率
+WareName	Varchar(50), -- 仓库
+HasForeignTrade	Varchar(50), -- 国外贸易
+IsDeduct	Varchar(50), -- 重新入库
+SelesName	Varchar(50), -- 采购人员
+Maker		Varchar(50), -- 制单人员
+DepartName	Varchar(50), -- 所属部门
+Permitter	Varchar(50), -- 复核人员
+ProjectName	Varchar(50), -- 所属项目
+UDef1		Varchar(50), -- 自定栏一
+UDef2		Varchar(50), -- 自定栏二
+Remark		Varchar(50), -- 备注
+a		Varchar(50), -- 备用字段
+b		Varchar(50)  -- 备用字段二
+);
+
+-- 采购退货详表(内容)  	
+drop table if exists tb_CaiGouTuiHuotwo;
+create table tb_CaiGouTuiHuotwo(
+SerNo	int  primary key, -- 栏号
+ProdID		int,  -- 物料编号
+ProdName	Varchar(50), -- 物料名称
+ProdSize	Varchar(50), -- 规格型号
+SUnit		Varchar (50), -- 单位名称
+SQuantity	int, -- 数量
+OldPrice	double, -- 折扣前单价
+Discount	double, -- 折数(%)
+SPrice		double, -- 单价
+Amount		double, -- 金额
+TaxRate		double, -- 税率
+TaxAmt		double, -- 税额
+AmountATax	double, -- 含税金额
+HaveBetch	int, -- 批号
+IsGift		int, -- 赠品
+HasInv		int, -- 发票明细
+HotInvCount	int, -- 未开票数量
+ItemRemark	Varchar(50), -- 分录备注
+TranType	Varchar(50), -- 来源单别
+FromNO		Varchar(50), -- 来源单号
+a		Varchar(50), -- 备用字段
+b		Varchar(50) -- 备用字段二
+);
+
+
+-- 采购分摊 	
+drop table if exists tb_CaiGouFengTan;
+create table tb_CaiGouFengTan(
+BillDate	Varchar(50), -- 单据日期
+BillNo		int  primary key, 		-- 单据号码
+FenTanFS	Varchar(50), -- 分摊方式
+PingZhengBH	int,  	-- 凭证编号
+DaiTanMonery	double,	-- 待摊金额本位币
+Maker		Varchar(50), -- 制单人员
+Permitter	Varchar(50), -- 复核人员
+a		Varchar(50), -- 备用字段
+b		Varchar(50)  -- 备用字段二
+);
+
+-- 采购分摊（费用明细）	
+drop table if exists tb_CaiGouFengTanMX;
+create table tb_CaiGouFengTanMX(
+BillDate	int  primary key, -- 栏号
+FeiYongID	int,		-- 费用编号
+FeiYongName	Varchar(50),	-- 费用名称
+CurrID		Varchar(50),	-- 币别
+ExchRate	double,		-- 汇率
+Amount		double,		-- 金额
+LocalAmount	double,		-- 金额本位币
+a               Varchar(50),	-- 备用字段
+b               Varchar(50)      -- 备用字段二
+);
+-- 采购分摊（分摊结果）	
+drop table if exists tb_CaiGouFengTanJG;
+create table tb_CaiGouFengTanJG(
+BillDate	int  primary key, -- 栏号
+CaiGouRKID	int,	-- 采购入库单号
+WUliaoBH	Varchar(50),		-- 物料编号
+WUliaoName	Varchar(50),	-- 物料名称
+GuiGeXH		Varchar(50),	-- 规格型号
+CaiGouJE	double,		-- 采购金额
+ShuLiang	int,		-- 数量
+DanWei	        int,		-- 单位
+ZhongLiang	int,		-- 重量
+CaiJi		int,		-- 材积
+FengTanJE	double,			-- 分摊金额
+a               Varchar(50),	-- 备用字段
+b               Varchar(50)      -- 备用字段二
+);
+
+
+-- 物料维护	
+drop table if exists tb_WuLiaoWeiHu;
+create table tb_WuLiaoWeiHu(
+ProdID		int  primary key, -- 物料编号
+Classleibie	Varchar(50),		-- 物料类别
+ClassName	Varchar(50),		-- 物料名称
+StdUnitName	Varchar(50),			-- 计量单位
+ProdSize	Varchar(50),			-- 规格型号
+BarCodeID	int,			-- 条形码编写
+EngName		Varchar(50),			-- 英文品名
+BatchUsed	Varchar(50),				-- 使用批号管理
+EffectDateUsed	Varchar(50),			-- 使用出厂日期
+ValidDateUsed	Varchar(50),			-- 使用有效日期
+DefValidDay    	Varchar(50),       	-- 有效天数
+UDef1		Varchar(50),		-- 自定栏一
+UDef2		Varchar(50),		-- 自定栏二  
+Remark		Varchar(50),		-- 物料说明
+a               Varchar(50),	-- 备用字段
+b               Varchar(50)       -- 备用字段二
+);
+
+
+-- 物料维护（基本资料）	
+drop table if exists tb_WuLiaoWeiHuJBziliao;
+create table tb_WuLiaoWeiHuJBziliao(
+SuggestPrice	double,	-- 建议售价
+CurrName	Varchar(50),	-- 使用币别
+SalesPriceA	double,		-- 售价A
+SalesPriceB	double,		-- 售价B
+SalesPriceC	double,		-- 售价C
+SalesPriceD	double,		-- 售价D
+SalesPriceE	double,		-- 售价E
+StdPrice	double,		-- 标准进价
+ProdForm	Varchar(50),		-- 物料形态
+PriceOfTax	Varchar(50),		-- 单价是否含税
+TaxItemsID	Varchar(50),	-- 税目
+BusiTaxRate	double,		-- 税率
+AdvanceDays	int,   		-- 采购提前期
+MajorSupplier	Varchar(50)  primary key,	-- 主供应商		
+a               Varchar(50),	-- 备用字段
+b               Varchar(50)      -- 备用字段二
+);
+
+
+-- 物料维护（存量总信息）
+drop table if exists tb_WuLiaoWeiHuCunLiangXX;	
+create table tb_WuLiaoWeiHuCunLiangXX(
+SafeQty		int,		-- 安全存量
+CSafeAllStk	int,		-- 低于安全存量
+BAllAmt		int,		-- 期初总数量
+CAllAmt		int,		-- 现有总数量
+BAvgCost	double,		-- 平均成本
+CAvgCost	double,		-- 现行平均成本
+BStdCost	double,		-- 标准成本
+CStdCost	double,		-- 标准总成本
+BTotalCost	double,		-- 期初总成本
+XXzongCBCost	double,		-- 现行总成本	
+a               Varchar(50)  primary key,	-- 备用字段
+b               Varchar(50)       -- 备用字段二
+);
+
+
+-- 物料维护（交易资料）	
+drop table if exists tb_WuLiaoWeiHuJYziliao;	
+create table tb_WuLiaoWeiHuJYziliao(
+ZCchukuR	date,		-- 最初出库日
+BQutStockDay	date,		-- 最近出库日
+BInStockDay	date,		-- 最初入库日
+ZJrukuDate	date,		-- 最近入库日
+SluggishDays	int,		-- 呆滞起计天数
+InvalidDate	date,		-- 停用日期
+a               Varchar(50)  primary key,	-- 备用字段
+b               Varchar(50)     -- 备用字段二
+);

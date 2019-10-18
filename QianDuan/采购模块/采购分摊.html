@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		 <style type="text/css">
+         .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2
+        {
+            width: 403px;
+        }
+        .auto-style3
+        {
+            height: 25px;
+        }
+        .auto-style4
+        {
+            height: 25px;
+        }
+        .auto-style7
+        {
+            width: 402px;
+        }
+        #Text1
+        {
+            width: 245px;
+        }
+        #Select1
+        {
+            width: 249px;
+        }
+        #Text4
+        {
+            width: 236px;
+        }
+        #Text2
+        {
+            width: 245px;
+        }
+        #Text3
+        {
+            width: 245px;
+        }
+        #Text5
+        {
+            width: 244px;
+        }
+        #Text6
+        {
+            width: 245px;
+        }
+        .auto-style8
+        {
+            width: 402px;
+            height: 23px;
+        }
+        .auto-style9
+        {
+            height: 23px;
+        }
+        #Select2
+        {
+            width: 98px;
+        }
+    </style>
+	</head>
+	<body>
+		  <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">单据日期&nbsp;&nbsp; 
+                    <input id="Text1" type="date" /></td>
+                <td>单据号码&nbsp;&nbsp; 
+                    <input id="Text2" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">分摊方式&nbsp;&nbsp; 
+                    <select id="Select1" name="D1">
+                        <option></option>
+                    </select></td>
+                <td>凭证编号&nbsp;&nbsp; 
+                    <input id="Text3" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">待摊金额本位币<input id="Text4" type="text" /></td>
+                <td class="auto-style4"></td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="2">&nbsp;&nbsp;&nbsp; 
+                   <ul class="nav nav-tabs">
+				  <li><a href="#home" data-toggle="tab">费用明细</a></li>
+				  <li><a href="#profile" data-toggle="tab">分摊结果</a></li>
+				</ul>
+				
+				<!-- 费用明细 -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="home">
+				<table align="center" class="auto-style1">
+            <tr>
+                <td>(栏号)</td>
+				<td>费用编号</td>
+				<td>(费用名称)</td>
+				<td>币别</td>
+				<td>汇率</td>
+				<td>金额</td>
+				<td>(金额本位币)</td>
+            </tr>
+        </table>
+				  </div>
+				  <!--
+                  	分摊结果
+                  -->
+				  <div class="tab-pane" id="profile">
+			<table align="center" class="auto-style1">
+            <tr>
+                <td>(栏号)</td>
+				<td>采购入库单号</td>
+				<td>物料编号</td>
+				<td>(物料名称)</td>
+				<td>(规格型号)</td>
+				<td>(采购金额)</td>
+				<td>(数量)</td>
+				<td>(单位)</td>
+				<td>(重量)</td>
+				<td>(材积)</td>
+				<td>(分摊金额)</td>
+            </tr>
+				  </div>
+				</div>
+                </td>
+            </tr>
+            </table>
+    
+    </div>
+    </form>
+   
+    <table align="center" class="auto-style1">
+        <tr>
+            <td class="auto-style7">制单人员&nbsp;&nbsp; 
+                <input id="Text5" type="text" /></td>
+            <td>复核人员&nbsp;&nbsp; 
+                <input id="Text6" type="text" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style8">
+                <select id="Select2" name="D2">
+                    <option></option>
+                </select></td>
+            <td class="auto-style9"></td>
+        </tr>
+    </table>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.js" ></script>
+</html>

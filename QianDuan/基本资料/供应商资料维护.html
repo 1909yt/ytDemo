@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+    <title></title>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 800px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style2
+        {
+            width: 187px;
+        }
+        .auto-style3
+        {
+            width: 154px;
+        }
+        .auto-style4
+        {
+            width: 154px;
+            height: 23px;
+        }
+        .auto-style5
+        {
+            width: 187px;
+            height: 23px;
+        }
+        .auto-style6
+        {
+            width: 215px;
+        }
+        .auto-style7
+        {
+            width: 215px;
+            height: 23px;
+        }
+        
+        
+        
+        
+        
+        .auto-style11
+        {
+            width: 700px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style21
+        {
+            width: 236px;
+        }
+        .auto-style31
+        {
+            width: 236px;
+            height: 20px;
+        }
+        .auto-style41
+        {
+            height: 20px\
+                 
+        }
+        #Select11
+        {
+            width: 144px;
+        }
+        
+        
+        
+      
+        
+         .auto-style122
+        {
+            width: 700px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        .auto-style222
+        {
+            width: 105px;
+        }
+        .auto-style322
+        {
+            width: 117px;
+        }
+        .auto-style422
+        {
+            width: 171px;
+        }
+        #Text322
+        {
+            width: 90px;
+        }
+        #Text522
+        {
+            width: 87px;
+        }
+        #Select122
+        {
+            width: 75px;
+        }
+        #Select222
+        {
+            width: 114px;
+        }
+    </style>
+</head>
+<body>
+	<div style="margin: auto; width: 800px;">
+    <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style3">
+                 供应商编号</td>
+                <td class="auto-style2">
+                    <input ID="TextBox9" name="TextBox9">
+                </td>
+                <td class="auto-style6">
+                 账款归属</td>
+                <td class="auto-style6">
+                   <input ID="TextBox17" name="TextBox17">
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    供应商全称</td>
+                <td class="auto-style2">
+                    <input ID="TextBox10" name="TextBox10" />
+                </td>
+                <td class="auto-style6">
+                    类别</td>
+                <td class="auto-style6">
+                    <input ID="TextBox16" name="TextBox16">
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    供应商简称
+                </td>
+                <td class="auto-style2">
+                    <input ID="TextBox11" name="TextBox11">
+                </td>
+                <td class="auto-style6">
+                    地区
+                </td>
+                <td class="auto-style6">
+                    <input  ID="TextBox15" name="TextBox15">
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    英文全称
+                </td>
+                <td class="auto-style2">
+                    <input ID="TextBox12" name="TextBox12">
+                </td>
+                <td class="auto-style6">
+                   币别
+                </td>
+                <td class="auto-style6">
+                    <input ID="TextBox14" name="TextBox14">
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    英文简称
+                </td>
+                <td class="auto-style5">
+                    <input ID="TextBox13" name="TextBox13">
+                </td>
+                <td class="auto-style7"></td>
+                <td class="auto-style7">&nbsp;</td>
+            </tr>
+           
+        </table>
+        
+        <div>
+        	<ul class="nav nav-tabs"  >
+  <li><a href="#home" data-toggle="tab">基本资料</a></li>
+  <li><a href="#profile" data-toggle="tab">采购信息</a></li>
+  <li><a href="#messages" data-toggle="tab">付款信息</a></li>
+  <li><a href="#settings" data-toggle="tab">地址</a></li>
+  <li><a href="#qita" data-toggle="tab">其他</a></li>
+            </ul>
+        </div>
+        
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home"> <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+                    负责人
+                </td>
+                <td class="auto-style4">
+                    <input id="Text1" type="text" />
+                   
+                </td>
+                <td class="auto-style5">
+                    采购人员
+                </td>
+                <td class="auto-style3">
+                    <input id="Text2" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    联系人
+                </td>
+                <td class="auto-style4">
+                    <input id="Text3" type="text" />
+                </td>
+                <td class="auto-style5">
+                    税务登记号
+                </td>
+                <td class="auto-style3">
+                    <input id="Text4" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    联系电话一
+                </td>
+                <td class="auto-style4">
+                    <input id="Text5" type="text" />
+                </td>
+                <td class="auto-style5">
+                   资本额
+                </td>
+                <td class="auto-style3">
+                    <input id="Text6" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    联系电话二
+                </td>
+                <td class="auto-style4">
+                    <input id="Text7" type="text" />
+                </td>
+                <td class="auto-style5">
+                    行业别
+                </td>
+                <td class="auto-style3">
+                    <input id="Text8" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                   联系电话三
+                </td>
+                <td class="auto-style4">
+                    <input id="Text9" type="text" />
+                </td>
+                <td class="auto-style5">
+                    电子邮件
+                </td>
+                <td class="auto-style3">
+                    <input id="Text10" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    移动电话
+                </td>
+                <td class="auto-style4">
+                    <input id="Text11" type="text" />
+                </td>
+                <td class="auto-style5">
+                   网址
+                </td>
+                <td class="auto-style3">
+                    <input id="Text12" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                   银行账户
+                </td>
+                <td class="auto-style4">
+                    <input id="Text13" type="text" />
+                </td>
+                <td class="auto-style5">
+                   传真号码
+                </td>
+                <td class="auto-style3">
+                    <input id="Text14" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                   开户银行
+                </td>
+                <td class="auto-style4">
+                    <input id="Text15" type="text" />
+                </td>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+        </table></div>
+  <div class="tab-pane" id="profile">
+  	
+  	<table align="center" class="auto-style11">
+            <tr>
+                <td class="auto-style21">
+                   最初采购入库目
+                </td>
+                <td>
+                    <input id="Text111" type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style31">
+                    最初采购退货日
+                </td>
+                <td class="auto-style41">
+                    <input id="Text21" type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style21">
+                    最近采购入库日
+                </td>
+                <td>
+                    <input id="Text31" type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style21">
+                   最近采购退货日
+                </td>
+                <td>
+                    <input id="Text41" type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style21">
+                    单价是否含税
+                </td>
+                <td>
+                   
+                    <select id="Select111">
+                        <option></option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style21">
+                    终止交易日
+                </td>
+                <td>
+                    <input id="Text511" type="date" />
+            </tr>
+        </table>
+  </div>
+  
+  
+  
+  
+  
+  <div class="tab-pane" id="messages">
+  	 <table align="center" class="auto-style122">
+            <tr>
+                <td class="auto-style222">账款额度</td>
+                <td class="auto-style322">
+                    <input id="Text122" type="text" /></td>
+                <td class="auto-style422">期初预付款</td>
+                <td>
+                    <input id="Text722" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">剩余额度</td>
+                <td class="auto-style322">
+                    <input id="Text222" type="text" /></td>
+                <td class="auto-style422">期初应付款</td>
+                <td>
+                    <input id="Text822" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">付款条件</td>
+                <td class="auto-style322">
+                    <select id="Select222" name="D2">
+                        <option></option>
+                    </select><br />
+                    天<input id="Text322" type="text" /></td>
+                <td class="auto-style422">期末预付款</td>
+                <td>
+                    <input id="Text922" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">每月结账日</td>
+                <td class="auto-style322">
+                    <input id="Text522" type="text" />号</td>
+                <td class="auto-style422">期末应付款</td>
+                <td>
+                    <input id="Text1022" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">信用等级</td>
+                <td class="auto-style322">
+                    <select id="Select122" name="D1">
+                        <option></option>
+                    </select></td>
+                <td class="auto-style422">未开票金额</td>
+                <td>
+                    <input id="Text1122" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">发票类型</td>
+                <td class="auto-style322">
+                    <input id="Text622" type="text" /></td>
+                <td class="auto-style422">预付账款科目</td>
+                <td>
+                    <input id="Text1222" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">&nbsp;</td>
+                <td class="auto-style322">&nbsp;</td>
+                <td class="auto-style422">应付账款科目</td>
+                <td>
+                    <input id="Text1322" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style222">&nbsp;</td>
+                <td class="auto-style322">&nbsp;</td>
+                <td class="auto-style422">应付暂估科目</td>
+                <td>
+                    <input id="Text1422" type="text" /></td>
+            </tr>
+        </table>
+  </div>
+  <div class="tab-pane" id="settings">
+  	<table border="1" style="width:80%">
+            <tr>
+                <td>(地址编号)</td>
+                <td>(地址)</td>
+                <td>(邮政编码)</td>
+                <td>(联系人)</td>
+                <td>(联系人职称)</td>
+                <td>(联系电话)</td>
+                <td>(传真号码)</td>
+                <td>(行走路线)</td>
+                <td>(备注)</td>
+            </tr>
+        </table></div>
+   <div class="tab-pane" id="qita">...</div> 
+</div>  
+        <br />   
+    </div>
+    </form>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+<script type="text/javascript" src="../js/bootstrap.js" ></script>
+</html>

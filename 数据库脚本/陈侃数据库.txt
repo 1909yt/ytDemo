@@ -1,0 +1,122 @@
+drop database if exists ck
+-- 仓库表
+create table ck(
+WareHouseID int primary key ,
+WareHouseName varchar(20),
+ShortName varchar(20),
+EngName varchar(20),
+LinkMan varchar(20),
+Telephone int ,
+WareHouseAddress  varchar(20),
+Memo varchar(100),
+one varchar(20)
+);
+
+drop database if exists TH
+create table TH(
+-- 退货主表
+CustID varchar(20) primary key ,
+BillDate date,
+SoHuoAddress varchar(20),
+BillNo int,
+YesNoshui char,
+BB varchar(20),
+Cangku varchar(20),
+Huilv varchar(20),
+Chongxingchuku varchar(20),
+Guowaimaoyi varchar(20),
+Pingzhengbianhao int,
+Yewurenyuan varchar(20),
+Zhidanrenyuan varchar(20),
+Suoshubumen varchar(20) ,
+Fuherenyuan varchar(20) ,
+Suoshuxiangmu varchar(20) ,
+one varchar(20)
+);
+
+drop database if exists thnr
+create table thnr(
+-- 退货内容
+Lanmu varchar(20) primary key,
+Wuliaobianhao int ,
+Wuliaomingcheng varchar(20) ,
+Guigexinghao varchar(20) ,
+Danweimingcheng varchar(20) ,
+Shuliang int ,
+Zhekouqiandanjia int,
+Zheshu int ,
+Danjia int,
+Jine int,
+Shuilv int ,
+Hanshuijine int ,
+Pihao int ,
+Zengping char ,
+Fapiaomingxi varchar(50),
+Weikaipiaoshuliang int ,
+Fenlubeizhu varchar(50) ,
+Laiyuandanbie char,
+Laiyuandanhao int,
+one varchar(20)
+);
+
+
+drop database if exists ysk
+create table ysk(
+-- 应收款主表
+Kehu varchar(20) primary key,
+Danjuriqi date,
+Jiesuanyi varchar(20),
+Danjuhaoma varchar(20),
+Jiesuaner varchar(20),
+Bb varchar(20) ,
+Jiesuansan varchar(20),
+Huilv int,
+Zhekoulv int ,
+Yingshouchongkuanleixing varchar(20) ,
+Zhongzhizhangyue date ,
+Pingzhengbianhao varchar(20) ,
+Suoshubumen varchar(20) ,
+Zhidanrenyuan varchar(20) ,
+Suoshuxiangmu varchar(20),
+Fuherenyuan varchar(20),
+Shenheshijian date,
+Shenhezhuangtai char ,
+one varchar(20)
+);
+
+drop database if exists yskxb
+create table yskxb(
+-- 应收款详表
+Lanhao int ,
+Danbie int,
+Yuandanriqi date ,
+Yuandandanhao int,
+Fapiaohaoma int,
+Jiaoyiduixiang int ,
+Jiaoyiduixiangmingcheng varchar(20) ,
+Bumenbianhao int ,
+Bumenmingcheng varchar(20) ,
+Yewurenyuan  varchar(20) ,
+Xiangmumingcheng varchar(20),
+Bibie varchar(20) ,
+Huilv int ,
+Yuandanjine int,
+Xianxinyuane int,
+Zherangyue int ,
+Chongkuanjine int,
+Chongdijin int ,
+one varchar(20)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+

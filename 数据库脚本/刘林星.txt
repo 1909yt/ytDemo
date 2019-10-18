@@ -1,0 +1,46 @@
+
+drop table if exists weihubiao;
+-- 客户主资料
+create table weihubiao(
+rybh varchar(50) not null ,-- 人员编号
+ssbm datetime not null ,-- 所属部门
+ryxm varchar(50) not null ,-- 人员姓名
+ywxm varchar(50) not null ,-- 英文姓名
+sfzh varchar(50) not null ,-- 身份证号
+rzsj varchar(50) not null ,-- 出生日期
+zzrq varchar(50) not null ,-- 转正日期 
+syqc varchar(50) not null ,-- 试用期长
+gj varchar(50),-- 国籍
+ldrq varchar(50),-- 离职日期
+jszw varchar(50),-- 技术职务
+zwzw varchar(50), -- 一中文职务
+ywzw varchar(50),-- 英文职务
+lxyb varchar(50),-- 联系邮编 
+lxdz varchar(50),-- 联系地址 
+lxdh varchar(50) -- 一联系电话 
+);
+
+
+use test
+drop table if exists weihubiao;
+-- 销售出库
+create table weihubiao(
+kh varchar(50) not null ,-- 客户
+djrq datetime not null ,-- 单据日期 
+shdz varchar(50) not null ,-- 送货地址
+djhm varchar(50) not null ,-- 单据号码 
+xschlx varchar(50) not null ,-- 销售出货类型
+bb varchar(50) not null,-- 币别
+hl varchar(50) not null,-- 汇率
+ck varchar(50) not null,-- 仓库
+gwmy varchar(50),-- 国外贸易
+pzbh varchar(50),-- 凭证编号
+cgry varchar(50),-- 采购人员
+ssbm varchar(50), -- 一所属部门
+fhry varchar(50),-- 复核人员
+shxm varchar(50) -- 一所属项目
+);
+
+
+
+

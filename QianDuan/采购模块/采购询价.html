@@ -1,0 +1,268 @@
+
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 552px;
+        }
+        #Text3
+        {
+            width: 45px;
+        }
+        #Text1
+        {
+            width: 193px;
+        }
+        #Text5
+        {
+            width: 191px;
+        }
+        #Select1
+        {
+            width: 197px;
+        }
+        #Select2
+        {
+            width: 196px;
+        }
+        .auto-style2
+        {
+            height: 23px;
+        }
+        #Select3
+        {
+            width: 147px;
+        }
+        #Text4
+        {
+            width: 139px;
+        }
+        #Text2
+        {
+            width: 149px;
+        }
+        .auto-style3
+        {
+            width: 549px;
+        }
+        .auto-style5
+        {
+            width: 30px;
+        }
+        .auto-style8
+        {
+            height: 21px;
+            width: 69px;
+        }
+        .auto-style9
+        {
+            width: 69px;
+        }
+        .auto-style14
+        {
+            height: 23px;
+            width: 69px;
+        }
+        .auto-style18
+        {
+            width: 113px;
+        }
+        .auto-style19
+        {
+            height: 21px;
+            width: 113px;
+        }
+        .auto-style20
+        {
+            height: 23px;
+        }
+        .auto-style21
+        {
+            width: 64px;
+        }
+        .auto-style22
+        {
+            height: 21px;
+            width: 64px;
+        }
+        .auto-style23
+        {
+            height: 23px;
+            width: 64px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <table align="center" class="auto-style1">
+            <tr>
+                <td>供应商</td>
+                <td>
+                    <input id="Text1" type="text" /></td>
+                <td>单据日期</td>
+                <td>
+                    <input id="Text2" type="date" /></td>
+            </tr>
+            <tr>
+                <td>供应商地址</td>
+                <td>
+                    <input id="Text3" type="text" /><input id="Text4" type="text" /></td>
+                <td>单据号码</td>
+                <td>
+                    <input id="Text7" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">有效日期</td>
+                <td class="auto-style2">
+                    <input id="Text5" type="date" /></td>
+                <td class="auto-style2">币别</td>
+                <td class="auto-style2">
+                    <input id="Text6" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">单价是否含税</td>
+                <td class="auto-style2">
+                    <select id="Select1" name="D1">
+                        <option></option>
+                    </select></td>
+                <td class="auto-style2">汇率</td>
+                <td class="auto-style2">
+                    <input id="Text8" type="text" /></td>
+            </tr>
+           
+          
+            <tr>
+                <td class="auto-style5" colspan="4">
+                	<ul class="nav nav-tabs">
+         <li><a href="#home" data-toggle="tab">内容</a></li>
+  <li><a href="#profile" data-toggle="tab">备注</a></li>
+  </ul>
+         
+         </td>
+            </tr>
+        </table>
+    
+         <div class="tab-content">
+  <div class="tab-pane active" id="home"><table border="1" style="width:300%;">
+            <tr>
+                <td>(栏号)</td>
+                <td>物料编号</td>
+                <td>(物料名称)</td>
+                <td>(规格型号)</td>
+                <td>(单位名称)</td>
+                <td>数量</td>
+                 <td>(币别)</td>
+                 <td>(标确进阶)</td>
+                 <td>(标确进阶金额)</td>
+                 <td>(币别)</td>
+                 <td>(单价)</td>
+                <td>(进阶金额)</td>
+                <td>需求日期</td>
+                <td>(建议采购日期)</td>
+                <td>(未采购日期)</td>
+                <td>(未采购量)</td>
+                <td>分录备注</td>
+                <td>(来源单别)</td>
+                <td>(来源单号)</td>
+
+
+
+
+            </tr>
+        </table></div>
+  <div class="tab-pane" id="profile"> <table align="center" class="auto-style1">
+            <tr>
+                <td class="auto-style13">表头条文</td>
+                <td class="auto-style12">
+                    <input id="Text4" type="text" />
+                </td>
+                <td class="auto-style10">制定栏一</td>
+                <td class="auto-style10">
+                    <input id="Text5" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style13">表尾条文</td>
+                <td class="auto-style12">
+                    <input id="Text6" type="text" />
+                </td>
+                <td class="auto-style10">制定栏二</td>
+                <td class="auto-style10">
+                    <input id="Text7" type="text" />
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="auto-style13">备注</td>
+                <td class="auto-style12">
+                    <textarea id="TextArea1" cols="20" name="S1" rows="2"></textarea></td>
+                <td class="auto-style9" colspan="2">&nbsp;</td>
+            </tr>
+            
+        </table></div>
+
+
+    </div>
+    </form>
+    <table align="center" class="auto-style3">
+        <tr>
+            <td class="auto-style9">采购人员</td>
+            <td class="auto-style21">
+                <input id="Text9" type="text" /></td>
+            <td class="auto-style9">制单人员</td>
+            <td class="auto-style18">
+                <input id="Text12" type="text" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style8">所属部门</td>
+            <td class="auto-style22">
+                <input id="Text10" type="text" /></td>
+            <td class="auto-style8">复制人员</td>
+            <td class="auto-style19">
+                <input id="Text13" type="text" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style14">所属项目</td>
+            <td class="auto-style23">
+                <input id="Text11" type="text" /></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style20"></td>
+        </tr>
+      
+        
+     
+      
+        
+     
+        <tr>
+            <td class="auto-style14"><select name="D4"><option>查询</option><option>历史交易查询</option><option>转单记录查询</option><option>订金查询</option></select>
+                <td class="auto-style21"><select name="D5"><option>转单</option><option>采购询价转入</option><option>采购请购转入</option><option>转采购入库单</option></select></td>
+</td>
+            <td class="auto-style14">
+                
+                <select name="D6"><option>查询</option><option>批次变更单价</option><option>单况状态切换</option></select><td class="auto-style20">&nbsp;</td></td>
+        </tr>
+      
+        
+     
+      
+        
+     
+    </table>
+</body>
+ <script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.js" ></script>
+    
+</html>
+
+        
+

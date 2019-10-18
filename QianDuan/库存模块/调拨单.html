@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="../css/bootstrap.css" />
+	</head>
+	<body>
+		  <div style="text-align:center;margin-top:100px;">
+    <table class="table">
+    	<tr>
+    		<td>         <label runat="server">调出仓库</label></td>
+    		<td>    <input id="Text1" type="text" /></td>
+    	    <td>          <label  runat="server">单据日期</label></td>
+    		<td>
+        <input id="Text5" type="date" /><br /></td>
+    	</tr>
+<tr>
+	         <td><label runat="server">调入仓库</label></td>
+	         <td>        <input id="Text3" type="text" /></td>
+	         <td>   <label  runat="server">单据号码</label></td>
+	          <td>        <input id="Text4" type="text" /><br /></td>
+</tr>
+    </table>
+           <ul class="nav nav-tabs">
+     <li><a href="#home" data-toggle="tab">内容</a></li>
+    <li><a href="#profile" data-toggle="tab">备注</a></li>
+
+   </ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">  
+    <table class="table table-bordered" style="width:70%;position:relative;left:120px;" border="1">
+        <tr>
+            <td>栏号</td>
+             <td>物料编号</td>
+             <td>物料名称</td>
+             <td>规格型号</td>
+             <td>单位</td>
+             <td>数量</td>
+             <td>批号</td>
+             <td>分录备注</td>
+        </tr>
+    </table>
+   </div>
+    <div class="tab-pane" id="profile"> 
+    	 <label  runat="server" >自定栏一</label>
+        <input id="Text5" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label  runat="server">自定栏二</label>
+        <input id="Text6" type="text" /><br />
+    	</div>
+        <br />
+        制单人员<input id="Text6" type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 复核人员<input id="Text7" type="text" /><br />
+        
+    </div>
+        <div style="position:relative;left:390px;">  
+                  <select style="position:relative;left:-600px;">
+                      <option>功能</option>
+                      <option>批号设定</option>
+                      <option>条码打印</option>
+                  </select>               </div>
+
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.js" ></script>
+</html>
