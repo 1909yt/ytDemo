@@ -28,5 +28,6 @@ namespace Model
         public string ssbm { get; set; }
         public string fhry { get; set; }
         public string shxm { get; set; }
+        public int id { get; set; }
     }
 }

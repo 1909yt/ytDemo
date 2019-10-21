@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="erpModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="erpModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="erpModelStoreContainer">
           <EntitySet Name="BuMenWeihu" EntityType="erpModel.Store.BuMenWeihu" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="bz" EntityType="erpModel.Store.bz" store:Type="Tables" Schema="dbo" />
@@ -1087,7 +1087,7 @@
         </EntityType>
         <EntityType Name="XiaoShouChuKan">
           <Key>
-            <PropertyRef Name="kh" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="kh" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="djrq" Type="datetime" Nullable="false" />
@@ -1103,6 +1103,7 @@
           <Property Name="ssbm" Type="varchar" MaxLength="50" />
           <Property Name="fhry" Type="varchar" MaxLength="50" />
           <Property Name="shxm" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Xiaoshoudingd">
           <Key>
@@ -1343,14 +1344,19 @@
           <Property Name="Chongdijin" Type="int" />
           <Property Name="one" Type="varchar" MaxLength="20" />
         </EntityType>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="erpModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="erpEntities1" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="erpEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="BuMenWeihus" EntityType="erpModel.BuMenWeihu" />
+          <EntitySet Name="bzs" EntityType="erpModel.bz" />
+          <EntitySet Name="cgdds" EntityType="erpModel.cgdd" />
           <EntitySet Name="cgddnrs" EntityType="erpModel.cgddnr" />
+          <EntitySet Name="cgqgds" EntityType="erpModel.cgqgd" />
           <EntitySet Name="cgqgdnrs" EntityType="erpModel.cgqgdnr" />
+          <EntitySet Name="cgxjds" EntityType="erpModel.cgxjd" />
           <EntitySet Name="cks" EntityType="erpModel.ck" />
           <EntitySet Name="DiaoBodans" EntityType="erpModel.DiaoBodan" />
           <EntitySet Name="DiaoBodanXBs" EntityType="erpModel.DiaoBodanXB" />
@@ -1359,6 +1365,10 @@
           <EntitySet Name="KuCunTaiZhangs" EntityType="erpModel.KuCunTaiZhang" />
           <EntitySet Name="Pandiandans" EntityType="erpModel.Pandiandan" />
           <EntitySet Name="PandiandanXBs" EntityType="erpModel.PandiandanXB" />
+          <EntitySet Name="Qitarukus" EntityType="erpModel.Qitaruku" />
+          <EntitySet Name="Qitarukuxiangs" EntityType="erpModel.Qitarukuxiang" />
+          <EntitySet Name="Quotations" EntityType="erpModel.Quotation" />
+          <EntitySet Name="Quotaxiangs" EntityType="erpModel.Quotaxiang" />
           <EntitySet Name="RenyuanWeihus" EntityType="erpModel.RenyuanWeihu" />
           <EntitySet Name="t_store" EntityType="erpModel.t_store" />
           <EntitySet Name="tb_bei" EntityType="erpModel.tb_bei" />
@@ -1381,24 +1391,16 @@
           <EntitySet Name="Tiaojiadans" EntityType="erpModel.Tiaojiadan" />
           <EntitySet Name="TiaojiadanXBs" EntityType="erpModel.TiaojiadanXB" />
           <EntitySet Name="XiaoShouChuKans" EntityType="erpModel.XiaoShouChuKan" />
+          <EntitySet Name="Xiaoshoudingds" EntityType="erpModel.Xiaoshoudingd" />
           <EntitySet Name="xiaoshoufabiaos" EntityType="erpModel.xiaoshoufabiao" />
           <EntitySet Name="xiaoshoufabiaoneirongs" EntityType="erpModel.xiaoshoufabiaoneirong" />
           <EntitySet Name="xiaoshoufabiaoqingdans" EntityType="erpModel.xiaoshoufabiaoqingdan" />
+          <EntitySet Name="Xiaoshouzhis" EntityType="erpModel.Xiaoshouzhi" />
           <EntitySet Name="yingshouchongkuans" EntityType="erpModel.yingshouchongkuan" />
           <EntitySet Name="yingshouchongkuanneirongs" EntityType="erpModel.yingshouchongkuanneirong" />
           <EntitySet Name="yingshouchongkuanqyys" EntityType="erpModel.yingshouchongkuanqyy" />
           <EntitySet Name="ysks" EntityType="erpModel.ysk" />
-          <EntitySet Name="bzs" EntityType="erpModel.bz" />
-          <EntitySet Name="cgdds" EntityType="erpModel.cgdd" />
-          <EntitySet Name="cgqgds" EntityType="erpModel.cgqgd" />
-          <EntitySet Name="cgxjds" EntityType="erpModel.cgxjd" />
-          <EntitySet Name="Qitarukus" EntityType="erpModel.Qitaruku" />
-          <EntitySet Name="Qitarukuxiangs" EntityType="erpModel.Qitarukuxiang" />
-          <EntitySet Name="Quotations" EntityType="erpModel.Quotation" />
-          <EntitySet Name="Quotaxiangs" EntityType="erpModel.Quotaxiang" />
-          <EntitySet Name="Xiaoshouzhis" EntityType="erpModel.Xiaoshouzhi" />
           <EntitySet Name="yskxbs" EntityType="erpModel.yskxb" />
-          <EntitySet Name="Xiaoshoudingds" EntityType="erpModel.Xiaoshoudingd" />
         </EntityContainer>
         <EntityType Name="BuMenWeihu">
           <Key>
@@ -1409,6 +1411,40 @@
           <Property Name="EngName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Memo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="One" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="bz">
+          <Key>
+            <PropertyRef Name="HeaderID" />
+          </Key>
+          <Property Name="HeaderID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FooterID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserDef1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserDef2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="cgdd">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddressID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillStyleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceOfTax" Type="DateTime" Precision="0" />
+          <Property Name="BillStatus" Type="Int32" />
+          <Property Name="BillDate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="Double" />
+          <Property Name="OutAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="cgddnr">
           <Key>
@@ -1435,6 +1471,21 @@
           <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
+        <EntityType Name="cgqgd">
+          <Key>
+            <PropertyRef Name="BillStyleID" />
+          </Key>
+          <Property Name="BillStyleID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Precision="0" />
+          <Property Name="BillNO" Type="Int32" />
+          <Property Name="SalesID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
         <EntityType Name="cgqgdnr">
           <Key>
             <PropertyRef Name="StuNo" />
@@ -1456,6 +1507,26 @@
           <Property Name="ItemRemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="TranType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="FromNo" Type="Int32" />
+          <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="cgxjd">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddressID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ValidDate" Type="DateTime" Precision="0" />
+          <Property Name="PriceOfTax" Type="DateTime" Precision="0" />
+          <Property Name="BillDate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="Double" />
+          <Property Name="OutAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
@@ -1593,6 +1664,76 @@
           <Property Name="HaveBatch" Type="Int32" Nullable="false" />
           <Property Name="ItemRemark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="one" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Qitaruku">
+          <Key>
+            <PropertyRef Name="BillStyeID" />
+          </Key>
+          <Property Name="BillStyeID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AdjustDate" Type="DateTime" Precision="0" />
+          <Property Name="WareID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Qitarukuxiang">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+          <Property Name="ProdID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sunit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" />
+          <Property Name="sPrice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BatchID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ItemRemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Quotation">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Precision="0" />
+          <Property Name="FormalCust" Type="Double" />
+          <Property Name="CustomerID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustAreaID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustAreaName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ValidDate" Type="DateTime" Precision="0" />
+          <Property Name="PriceOfTax" Type="Double" />
+          <Property Name="CurrID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Rermitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Beiyong" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Quotaxiang">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+          <Property Name="ProdID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sunit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" />
+          <Property Name="OldPrice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Discount" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sPrice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxRate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxAmt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VFTotal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsGift" Type="Double" />
+          <Property Name="ItemRemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="beiyong" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="RenyuanWeihu">
           <Key>
@@ -2148,14 +2289,7 @@
         </EntityType>
         <EntityType Name="XiaoShouChuKan">
           <Key>
-            <PropertyRef Name="kh" />
-            <PropertyRef Name="djrq" />
-            <PropertyRef Name="shdz" />
-            <PropertyRef Name="djhm" />
-            <PropertyRef Name="xschlx" />
-            <PropertyRef Name="bb" />
-            <PropertyRef Name="hl" />
-            <PropertyRef Name="ck" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="kh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="djrq" Type="DateTime" Nullable="false" Precision="3" />
@@ -2171,6 +2305,29 @@
           <Property Name="ssbm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="fhry" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="shxm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Xiaoshoudingd">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Precision="0" />
+          <Property Name="FormalCust" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustAreaID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustAreaName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ValidDate" Type="DateTime" Precision="0" />
+          <Property Name="PriceOfTax" Type="Double" />
+          <Property Name="CustBillNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Rermitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Beiyong" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="xiaoshoufabiao">
           <Key>
@@ -2245,6 +2402,36 @@
           <Property Name="a" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="b" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="c" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Xiaoshouzhi">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+          <Property Name="ProdID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sunit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" />
+          <Property Name="OldPrice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Discount" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sPrice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxRate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxAmt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VFTotal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsGift" Type="Double" />
+          <Property Name="ItemRemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="beiyong" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PreInDate" Type="DateTime" Precision="0" />
+          <Property Name="QtyRemain" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TranType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasCombine" Type="Double" />
+          <Property Name="FromNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsManu" Type="Double" />
+          <Property Name="ArrangeNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ManuQty" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="cheshi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="yingshouchongkuan">
           <Key>
@@ -2335,227 +2522,36 @@
           <Property Name="Shenhezhuangtai" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
           <Property Name="one" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
         </EntityType>
-        <EntityType Name="bz">
-          <Key>
-            <PropertyRef Name="HeaderID" />
-          </Key>
-          <Property Type="String" Name="HeaderID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="FooterID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="UserDef1" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="UserDef2" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="a" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="b" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="cgdd">
-          <Key>
-            <PropertyRef Name="CustomerID" />
-          </Key>
-          <Property Type="String" Name="CustomerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="AddressID" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillStyleName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="PriceOfTax" Precision="0" />
-          <Property Type="Int32" Name="BillStatus" />
-          <Property Type="String" Name="BillDate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillNO" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CurrID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="ExchRate" />
-          <Property Type="String" Name="OutAddress" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="SalesName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Maker" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProjectID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="a" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="b" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="cgqgd">
-          <Key>
-            <PropertyRef Name="BillStyleID" />
-          </Key>
-          <Property Type="String" Name="BillStyleID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillStatus" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="BillDate" Precision="0" />
-          <Property Type="Int32" Name="BillNO" />
-          <Property Type="String" Name="SalesID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Maker" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="a" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="b" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="cgxjd">
-          <Key>
-            <PropertyRef Name="CustomerID" />
-          </Key>
-          <Property Type="String" Name="CustomerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="AddressID" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="ValidDate" Precision="0" />
-          <Property Type="DateTime" Name="PriceOfTax" Precision="0" />
-          <Property Type="String" Name="BillDate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillNO" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CurrID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="ExchRate" />
-          <Property Type="String" Name="OutAddress" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Maker" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="SalesName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="a" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="b" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Qitaruku">
-          <Key>
-            <PropertyRef Name="BillStyeID" />
-          </Key>
-          <Property Type="String" Name="BillStyeID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="AdjustDate" Precision="0" />
-          <Property Type="String" Name="WareID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillNo" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="VoucherNO" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="SalesID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Maker" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Qitarukuxiang">
-          <Key>
-            <PropertyRef Name="SerNO" />
-          </Key>
-          <Property Type="Int32" Name="SerNO" Nullable="false" />
-          <Property Type="String" Name="ProdID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdSize" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Sunit" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="sQuantity" />
-          <Property Type="String" Name="sPrice" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Amount" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BatchID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ItemRemark" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Quotation">
-          <Key>
-            <PropertyRef Name="BillNO" />
-          </Key>
-          <Property Type="String" Name="BillNO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="BillDate" Precision="0" />
-          <Property Type="Double" Name="FormalCust" />
-          <Property Type="String" Name="CustomerID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CustAreaID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CustAreaName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="ValidDate" Precision="0" />
-          <Property Type="Double" Name="PriceOfTax" />
-          <Property Type="String" Name="CurrID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ExchRate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="SalesID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Rermitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Beiyong" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Quotaxiang">
-          <Key>
-            <PropertyRef Name="SerNO" />
-          </Key>
-          <Property Type="Int32" Name="SerNO" Nullable="false" />
-          <Property Type="String" Name="ProdID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdSize" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Sunit" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="sQuantity" />
-          <Property Type="String" Name="OldPrice" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Discount" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="sPrice" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Amount" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="TaxRate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="TaxAmt" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="VFTotal" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="IsGift" />
-          <Property Type="String" Name="ItemRemark" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="beiyong" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Xiaoshouzhi">
-          <Key>
-            <PropertyRef Name="SerNO" />
-          </Key>
-          <Property Type="Int32" Name="SerNO" Nullable="false" />
-          <Property Type="String" Name="ProdID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ProdSize" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Sunit" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="sQuantity" />
-          <Property Type="String" Name="OldPrice" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Discount" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="sPrice" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Amount" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="TaxRate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="TaxAmt" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="VFTotal" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="IsGift" />
-          <Property Type="String" Name="ItemRemark" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="beiyong" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="PreInDate" Precision="0" />
-          <Property Type="String" Name="QtyRemain" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="TranType" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="HasCombine" />
-          <Property Type="String" Name="FromNO" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Double" Name="IsManu" />
-          <Property Type="String" Name="ArrangeNO" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ManuQty" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="cheshi" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="yskxb">
           <Key>
             <PropertyRef Name="Lanhao" />
           </Key>
-          <Property Type="Int32" Name="Lanhao" Nullable="false" />
-          <Property Type="Int32" Name="Danbie" />
-          <Property Type="DateTime" Name="Yuandanriqi" Precision="0" />
-          <Property Type="Int32" Name="Yuandandanhao" />
-          <Property Type="Int32" Name="Fapiaohaoma" />
-          <Property Type="Int32" Name="Jiaoyiduixiang" />
-          <Property Type="String" Name="Jiaoyiduixiangmingcheng" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="Bumenbianhao" />
-          <Property Type="String" Name="Bumenmingcheng" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Yewurenyuan" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Xiangmumingcheng" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Bibie" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="Huilv" />
-          <Property Type="Int32" Name="Yuandanjine" />
-          <Property Type="Int32" Name="Xianxinyuane" />
-          <Property Type="Int32" Name="Zherangyue" />
-          <Property Type="Int32" Name="Chongkuanjine" />
-          <Property Type="Int32" Name="Chongdijin" />
-          <Property Type="String" Name="one" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Xiaoshoudingd">
-          <Key>
-            <PropertyRef Name="BillNO" />
-          </Key>
-          <Property Type="String" Name="BillNO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="BillDate" Precision="0" />
-          <Property Type="String" Name="FormalCust" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CustomerID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CustAreaID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CustAreaName" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="ValidDate" Precision="0" />
-          <Property Type="Double" Name="PriceOfTax" />
-          <Property Type="String" Name="CustBillNo" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BillStatus" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CurrID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ExchRate" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="SalesID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Rermitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="DepartID" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Permitter" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Beiyong" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lanhao" Type="Int32" Nullable="false" />
+          <Property Name="Danbie" Type="Int32" />
+          <Property Name="Yuandanriqi" Type="DateTime" Precision="0" />
+          <Property Name="Yuandandanhao" Type="Int32" />
+          <Property Name="Fapiaohaoma" Type="Int32" />
+          <Property Name="Jiaoyiduixiang" Type="Int32" />
+          <Property Name="Jiaoyiduixiangmingcheng" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bumenbianhao" Type="Int32" />
+          <Property Name="Bumenmingcheng" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Yewurenyuan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Xiangmumingcheng" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bibie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="Int32" />
+          <Property Name="Yuandanjine" Type="Int32" />
+          <Property Name="Xianxinyuane" Type="Int32" />
+          <Property Name="Zherangyue" Type="Int32" />
+          <Property Name="Chongkuanjine" Type="Int32" />
+          <Property Name="Chongdijin" Type="Int32" />
+          <Property Name="one" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="erpModelStoreContainer" CdmEntityContainer="erpEntities1">
+        <EntityContainerMapping StorageEntityContainer="erpModelStoreContainer" CdmEntityContainer="erpEntities">
           <EntitySetMapping Name="BuMenWeihus">
             <EntityTypeMapping TypeName="erpModel.BuMenWeihu">
               <MappingFragment StoreEntitySet="BuMenWeihu">
@@ -2564,6 +2560,42 @@
                 <ScalarProperty Name="EngName" ColumnName="EngName" />
                 <ScalarProperty Name="Memo" ColumnName="Memo" />
                 <ScalarProperty Name="One" ColumnName="One" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bzs">
+            <EntityTypeMapping TypeName="erpModel.bz">
+              <MappingFragment StoreEntitySet="bz">
+                <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
+                <ScalarProperty Name="FooterID" ColumnName="FooterID" />
+                <ScalarProperty Name="UserDef1" ColumnName="UserDef1" />
+                <ScalarProperty Name="UserDef2" ColumnName="UserDef2" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cgdds">
+            <EntityTypeMapping TypeName="erpModel.cgdd">
+              <MappingFragment StoreEntitySet="cgdd">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="BillStyleName" ColumnName="BillStyleName" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="OutAddress" ColumnName="OutAddress" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2593,6 +2625,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="cgqgds">
+            <EntityTypeMapping TypeName="erpModel.cgqgd">
+              <MappingFragment StoreEntitySet="cgqgd">
+                <ScalarProperty Name="BillStyleID" ColumnName="BillStyleID" />
+                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="cgqgdnrs">
             <EntityTypeMapping TypeName="erpModel.cgqgdnr">
               <MappingFragment StoreEntitySet="cgqgdnr">
@@ -2613,6 +2661,27 @@
                 <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
                 <ScalarProperty Name="TranType" ColumnName="TranType" />
                 <ScalarProperty Name="FromNo" ColumnName="FromNo" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cgxjds">
+            <EntityTypeMapping TypeName="erpModel.cgxjd">
+              <MappingFragment StoreEntitySet="cgxjd">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="OutAddress" ColumnName="OutAddress" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
                 <ScalarProperty Name="a" ColumnName="a" />
                 <ScalarProperty Name="b" ColumnName="b" />
               </MappingFragment>
@@ -2746,6 +2815,80 @@
                 <ScalarProperty Name="HaveBatch" ColumnName="HaveBatch" />
                 <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
                 <ScalarProperty Name="one" ColumnName="one" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qitarukus">
+            <EntityTypeMapping TypeName="erpModel.Qitaruku">
+              <MappingFragment StoreEntitySet="Qitaruku">
+                <ScalarProperty Name="BillStyeID" ColumnName="BillStyeID" />
+                <ScalarProperty Name="AdjustDate" ColumnName="AdjustDate" />
+                <ScalarProperty Name="WareID" ColumnName="WareID" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qitarukuxiangs">
+            <EntityTypeMapping TypeName="erpModel.Qitarukuxiang">
+              <MappingFragment StoreEntitySet="Qitarukuxiang">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quotations">
+            <EntityTypeMapping TypeName="erpModel.Quotation">
+              <MappingFragment StoreEntitySet="Quotation">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="FormalCust" ColumnName="FormalCust" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustAreaID" ColumnName="CustAreaID" />
+                <ScalarProperty Name="CustAreaName" ColumnName="CustAreaName" />
+                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Rermitter" ColumnName="Rermitter" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="Beiyong" ColumnName="Beiyong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quotaxiangs">
+            <EntityTypeMapping TypeName="erpModel.Quotaxiang">
+              <MappingFragment StoreEntitySet="Quotaxiang">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
+                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+                <ScalarProperty Name="beiyong" ColumnName="beiyong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3278,6 +3421,30 @@
                 <ScalarProperty Name="ssbm" ColumnName="ssbm" />
                 <ScalarProperty Name="fhry" ColumnName="fhry" />
                 <ScalarProperty Name="shxm" ColumnName="shxm" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Xiaoshoudingds">
+            <EntityTypeMapping TypeName="erpModel.Xiaoshoudingd">
+              <MappingFragment StoreEntitySet="Xiaoshoudingd">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="FormalCust" ColumnName="FormalCust" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustAreaID" ColumnName="CustAreaID" />
+                <ScalarProperty Name="CustAreaName" ColumnName="CustAreaName" />
+                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="CustBillNo" ColumnName="CustBillNo" />
+                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Rermitter" ColumnName="Rermitter" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="Beiyong" ColumnName="Beiyong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3355,6 +3522,37 @@
                 <ScalarProperty Name="a" ColumnName="a" />
                 <ScalarProperty Name="b" ColumnName="b" />
                 <ScalarProperty Name="c" ColumnName="c" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Xiaoshouzhis">
+            <EntityTypeMapping TypeName="erpModel.Xiaoshouzhi">
+              <MappingFragment StoreEntitySet="Xiaoshouzhi">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
+                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+                <ScalarProperty Name="beiyong" ColumnName="beiyong" />
+                <ScalarProperty Name="PreInDate" ColumnName="PreInDate" />
+                <ScalarProperty Name="QtyRemain" ColumnName="QtyRemain" />
+                <ScalarProperty Name="TranType" ColumnName="TranType" />
+                <ScalarProperty Name="HasCombine" ColumnName="HasCombine" />
+                <ScalarProperty Name="FromNO" ColumnName="FromNO" />
+                <ScalarProperty Name="IsManu" ColumnName="IsManu" />
+                <ScalarProperty Name="ArrangeNO" ColumnName="ArrangeNO" />
+                <ScalarProperty Name="ManuQty" ColumnName="ManuQty" />
+                <ScalarProperty Name="cheshi" ColumnName="cheshi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3451,229 +3649,28 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="bzs">
-            <EntityTypeMapping TypeName="erpModel.bz">
-              <MappingFragment StoreEntitySet="bz">
-                <ScalarProperty Name="b" ColumnName="b" />
-                <ScalarProperty Name="a" ColumnName="a" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="UserDef2" ColumnName="UserDef2" />
-                <ScalarProperty Name="UserDef1" ColumnName="UserDef1" />
-                <ScalarProperty Name="FooterID" ColumnName="FooterID" />
-                <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="cgdds">
-            <EntityTypeMapping TypeName="erpModel.cgdd">
-              <MappingFragment StoreEntitySet="cgdd">
-                <ScalarProperty Name="b" ColumnName="b" />
-                <ScalarProperty Name="a" ColumnName="a" />
-                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Maker" ColumnName="Maker" />
-                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
-                <ScalarProperty Name="OutAddress" ColumnName="OutAddress" />
-                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
-                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
-                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
-                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
-                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
-                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
-                <ScalarProperty Name="BillStyleName" ColumnName="BillStyleName" />
-                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="cgqgds">
-            <EntityTypeMapping TypeName="erpModel.cgqgd">
-              <MappingFragment StoreEntitySet="cgqgd">
-                <ScalarProperty Name="b" ColumnName="b" />
-                <ScalarProperty Name="a" ColumnName="a" />
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Maker" ColumnName="Maker" />
-                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
-                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
-                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
-                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
-                <ScalarProperty Name="BillStyleID" ColumnName="BillStyleID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="cgxjds">
-            <EntityTypeMapping TypeName="erpModel.cgxjd">
-              <MappingFragment StoreEntitySet="cgxjd">
-                <ScalarProperty Name="b" ColumnName="b" />
-                <ScalarProperty Name="a" ColumnName="a" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
-                <ScalarProperty Name="Maker" ColumnName="Maker" />
-                <ScalarProperty Name="OutAddress" ColumnName="OutAddress" />
-                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
-                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
-                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
-                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
-                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
-                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
-                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Qitarukus">
-            <EntityTypeMapping TypeName="erpModel.Qitaruku">
-              <MappingFragment StoreEntitySet="Qitaruku">
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Maker" ColumnName="Maker" />
-                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
-                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
-                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
-                <ScalarProperty Name="WareID" ColumnName="WareID" />
-                <ScalarProperty Name="AdjustDate" ColumnName="AdjustDate" />
-                <ScalarProperty Name="BillStyeID" ColumnName="BillStyeID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Qitarukuxiangs">
-            <EntityTypeMapping TypeName="erpModel.Qitarukuxiang">
-              <MappingFragment StoreEntitySet="Qitarukuxiang">
-                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
-                <ScalarProperty Name="BatchID" ColumnName="BatchID" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
-                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
-                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
-                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
-                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
-                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
-                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Quotations">
-            <EntityTypeMapping TypeName="erpModel.Quotation">
-              <MappingFragment StoreEntitySet="Quotation">
-                <ScalarProperty Name="Beiyong" ColumnName="Beiyong" />
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Rermitter" ColumnName="Rermitter" />
-                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
-                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
-                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
-                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
-                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
-                <ScalarProperty Name="CustAreaName" ColumnName="CustAreaName" />
-                <ScalarProperty Name="CustAreaID" ColumnName="CustAreaID" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-                <ScalarProperty Name="FormalCust" ColumnName="FormalCust" />
-                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
-                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Quotaxiangs">
-            <EntityTypeMapping TypeName="erpModel.Quotaxiang">
-              <MappingFragment StoreEntitySet="Quotaxiang">
-                <ScalarProperty Name="beiyong" ColumnName="beiyong" />
-                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
-                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
-                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
-                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
-                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
-                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
-                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
-                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
-                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
-                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
-                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Xiaoshouzhis">
-            <EntityTypeMapping TypeName="erpModel.Xiaoshouzhi">
-              <MappingFragment StoreEntitySet="Xiaoshouzhi">
-                <ScalarProperty Name="cheshi" ColumnName="cheshi" />
-                <ScalarProperty Name="ManuQty" ColumnName="ManuQty" />
-                <ScalarProperty Name="ArrangeNO" ColumnName="ArrangeNO" />
-                <ScalarProperty Name="IsManu" ColumnName="IsManu" />
-                <ScalarProperty Name="FromNO" ColumnName="FromNO" />
-                <ScalarProperty Name="HasCombine" ColumnName="HasCombine" />
-                <ScalarProperty Name="TranType" ColumnName="TranType" />
-                <ScalarProperty Name="QtyRemain" ColumnName="QtyRemain" />
-                <ScalarProperty Name="PreInDate" ColumnName="PreInDate" />
-                <ScalarProperty Name="beiyong" ColumnName="beiyong" />
-                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
-                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
-                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
-                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
-                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
-                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
-                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
-                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
-                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
-                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
-                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="yskxbs">
             <EntityTypeMapping TypeName="erpModel.yskxb">
               <MappingFragment StoreEntitySet="yskxb">
-                <ScalarProperty Name="one" ColumnName="one" />
-                <ScalarProperty Name="Chongdijin" ColumnName="Chongdijin" />
-                <ScalarProperty Name="Chongkuanjine" ColumnName="Chongkuanjine" />
-                <ScalarProperty Name="Zherangyue" ColumnName="Zherangyue" />
-                <ScalarProperty Name="Xianxinyuane" ColumnName="Xianxinyuane" />
-                <ScalarProperty Name="Yuandanjine" ColumnName="Yuandanjine" />
-                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
-                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
-                <ScalarProperty Name="Xiangmumingcheng" ColumnName="Xiangmumingcheng" />
-                <ScalarProperty Name="Yewurenyuan" ColumnName="Yewurenyuan" />
-                <ScalarProperty Name="Bumenmingcheng" ColumnName="Bumenmingcheng" />
-                <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
-                <ScalarProperty Name="Jiaoyiduixiangmingcheng" ColumnName="Jiaoyiduixiangmingcheng" />
-                <ScalarProperty Name="Jiaoyiduixiang" ColumnName="Jiaoyiduixiang" />
-                <ScalarProperty Name="Fapiaohaoma" ColumnName="Fapiaohaoma" />
-                <ScalarProperty Name="Yuandandanhao" ColumnName="Yuandandanhao" />
-                <ScalarProperty Name="Yuandanriqi" ColumnName="Yuandanriqi" />
-                <ScalarProperty Name="Danbie" ColumnName="Danbie" />
                 <ScalarProperty Name="Lanhao" ColumnName="Lanhao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Xiaoshoudingds">
-            <EntityTypeMapping TypeName="erpModel.Xiaoshoudingd">
-              <MappingFragment StoreEntitySet="Xiaoshoudingd">
-                <ScalarProperty Name="Beiyong" ColumnName="Beiyong" />
-                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
-                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
-                <ScalarProperty Name="Rermitter" ColumnName="Rermitter" />
-                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
-                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
-                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
-                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
-                <ScalarProperty Name="CustBillNo" ColumnName="CustBillNo" />
-                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
-                <ScalarProperty Name="ValidDate" ColumnName="ValidDate" />
-                <ScalarProperty Name="CustAreaName" ColumnName="CustAreaName" />
-                <ScalarProperty Name="CustAreaID" ColumnName="CustAreaID" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-                <ScalarProperty Name="FormalCust" ColumnName="FormalCust" />
-                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
-                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="Danbie" ColumnName="Danbie" />
+                <ScalarProperty Name="Yuandanriqi" ColumnName="Yuandanriqi" />
+                <ScalarProperty Name="Yuandandanhao" ColumnName="Yuandandanhao" />
+                <ScalarProperty Name="Fapiaohaoma" ColumnName="Fapiaohaoma" />
+                <ScalarProperty Name="Jiaoyiduixiang" ColumnName="Jiaoyiduixiang" />
+                <ScalarProperty Name="Jiaoyiduixiangmingcheng" ColumnName="Jiaoyiduixiangmingcheng" />
+                <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+                <ScalarProperty Name="Bumenmingcheng" ColumnName="Bumenmingcheng" />
+                <ScalarProperty Name="Yewurenyuan" ColumnName="Yewurenyuan" />
+                <ScalarProperty Name="Xiangmumingcheng" ColumnName="Xiangmumingcheng" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="Yuandanjine" ColumnName="Yuandanjine" />
+                <ScalarProperty Name="Xianxinyuane" ColumnName="Xianxinyuane" />
+                <ScalarProperty Name="Zherangyue" ColumnName="Zherangyue" />
+                <ScalarProperty Name="Chongkuanjine" ColumnName="Chongkuanjine" />
+                <ScalarProperty Name="Chongdijin" ColumnName="Chongdijin" />
+                <ScalarProperty Name="one" ColumnName="one" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

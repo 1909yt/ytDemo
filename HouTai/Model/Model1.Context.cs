@@ -13,10 +13,10 @@ namespace Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class erpEntities1 : DbContext
+    public partial class erpEntities : DbContext
     {
-        public erpEntities1()
-            : base("name=erpEntities1")
+        public erpEntities()
+            : base("name=erpEntities")
         {
         }
     
@@ -26,8 +26,12 @@ namespace Model
         }
     
         public DbSet<BuMenWeihu> BuMenWeihus { get; set; }
+        public DbSet<bz> bzs { get; set; }
+        public DbSet<cgdd> cgdds { get; set; }
         public DbSet<cgddnr> cgddnrs { get; set; }
+        public DbSet<cgqgd> cgqgds { get; set; }
         public DbSet<cgqgdnr> cgqgdnrs { get; set; }
+        public DbSet<cgxjd> cgxjds { get; set; }
         public DbSet<ck> cks { get; set; }
         public DbSet<DiaoBodan> DiaoBodans { get; set; }
         public DbSet<DiaoBodanXB> DiaoBodanXBs { get; set; }
@@ -36,6 +40,10 @@ namespace Model
         public DbSet<KuCunTaiZhang> KuCunTaiZhangs { get; set; }
         public DbSet<Pandiandan> Pandiandans { get; set; }
         public DbSet<PandiandanXB> PandiandanXBs { get; set; }
+        public DbSet<Qitaruku> Qitarukus { get; set; }
+        public DbSet<Qitarukuxiang> Qitarukuxiangs { get; set; }
+        public DbSet<Quotation> Quotations { get; set; }
+        public DbSet<Quotaxiang> Quotaxiangs { get; set; }
         public DbSet<RenyuanWeihu> RenyuanWeihus { get; set; }
         public DbSet<t_store> t_store { get; set; }
         public DbSet<tb_bei> tb_bei { get; set; }
@@ -58,23 +66,15 @@ namespace Model
         public DbSet<Tiaojiadan> Tiaojiadans { get; set; }
         public DbSet<TiaojiadanXB> TiaojiadanXBs { get; set; }
         public DbSet<XiaoShouChuKan> XiaoShouChuKans { get; set; }
+        public DbSet<Xiaoshoudingd> Xiaoshoudingds { get; set; }
         public DbSet<xiaoshoufabiao> xiaoshoufabiaos { get; set; }
         public DbSet<xiaoshoufabiaoneirong> xiaoshoufabiaoneirongs { get; set; }
         public DbSet<xiaoshoufabiaoqingdan> xiaoshoufabiaoqingdans { get; set; }
+        public DbSet<Xiaoshouzhi> Xiaoshouzhis { get; set; }
         public DbSet<yingshouchongkuan> yingshouchongkuans { get; set; }
         public DbSet<yingshouchongkuanneirong> yingshouchongkuanneirongs { get; set; }
         public DbSet<yingshouchongkuanqyy> yingshouchongkuanqyys { get; set; }
         public DbSet<ysk> ysks { get; set; }
-        public DbSet<bz> bzs { get; set; }
-        public DbSet<cgdd> cgdds { get; set; }
-        public DbSet<cgqgd> cgqgds { get; set; }
-        public DbSet<cgxjd> cgxjds { get; set; }
-        public DbSet<Qitaruku> Qitarukus { get; set; }
-        public DbSet<Qitarukuxiang> Qitarukuxiangs { get; set; }
-        public DbSet<Quotation> Quotations { get; set; }
-        public DbSet<Quotaxiang> Quotaxiangs { get; set; }
-        public DbSet<Xiaoshouzhi> Xiaoshouzhis { get; set; }
         public DbSet<yskxb> yskxbs { get; set; }
-        public DbSet<Xiaoshoudingd> Xiaoshoudingds { get; set; }
     }
 }
