@@ -1,9 +1,0 @@
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\Model.dll.config
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\Model.dll
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\Model.pdb
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\EntityFramework.dll
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\EntityFramework.xml
-E:\gitQD\HouTai\HouTai\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
-E:\gitQD\HouTai\HouTai\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
-E:\gitQD\HouTai\HouTai\Model\obj\Debug\Model.dll
-E:\gitQD\HouTai\HouTai\Model\obj\Debug\Model.pdb
