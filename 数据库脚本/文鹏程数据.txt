@@ -1,0 +1,138 @@
+use test
+drop table if exists class;
+-- 销售发票
+CREATE table xiaoshoufabiao(
+CustID varchar(50) not null primary key, -- 客户ID
+BillType int not null, -- 单据类型
+PriceOfTax int not null, -- 单价是否含税
+Addr varchar(500) not null, -- 发票地址
+AffirmState varchar(50) not null, -- 销售核对状态
+SrNo varchar(50) not null, -- 收入凭证编号
+CVoucherNO varchar(50) not null, -- 成本凭证编号
+BillDate date not null, -- 单据日期
+FundBillNo varchar(50) not null, -- 单据号码
+InvoiceNo varchar(50) not null, -- 发票号码
+InvoTypeId int not null, -- 发票类型
+CurrID int not null, -- 币别
+ExchRate float not null, -- 汇率
+Salesman varchar(50) not null, -- 业务人员
+DeptID int not null, -- 所属部门
+ProjectID varchar(50) not null, -- 所属项目
+Maker varchar(50) not null,-- 制单人员
+Permitter varchar(50) not null, -- 复核人员
+a int null, 
+b varchar(50) null
+)
+
+
+
+drop table if exists class;
+-- 销售发票内容详表
+CREATE table xiaoshoufabiaoneirong(
+SerNo int not null primary key, -- 栏号
+ProdId varchar(50) not null, -- 物料编号
+ProdName varchar(50) not null, -- 物料名称
+ProdSize varchar(50) not null, -- 规格型号
+SUnit varchar(50) not null, -- 单位名称
+SQuantity int not null, -- 数量
+SPrice float not null, -- 单价
+Amount float not null, -- 金额
+TaxRate float not null, -- 税率
+TaxAmt float not null, -- 税额
+AmountWithTax float not null, -- 含税金额
+LQty int not null, -- 未出数量
+xsdd  varchar(50) not null, -- 销售订单号
+IsGift int not null, -- 赠品
+Remark varchar(500) not null, -- 分录备注
+a varchar(50)  null, 
+b varchar(50)  null, 
+c varchar(50)  null
+)
+drop table if exists class;
+-- 销售发票清单详表
+CREATE table xiaoshoufabiaoqingdan(
+SerNo  int not null primary key, -- 栏号
+ProdId varchar(50)  null, -- 物料编号
+ProdName varchar(50)  null, -- 物料名称
+ProdSize varchar(50)  null, -- 规格型号
+SUnit varchar(50)  null, -- 单位名称
+SourcePrice float  null, -- 原单单价
+Amount float not null, -- 金额
+SQuantity int not null, -- 数量
+HasCombine int not null, -- 物料组合
+Price float not null, -- 发票单价
+Amountaa float not null, -- 金额
+TaxRate float not null, -- 税率
+TaxAmt float not null, -- 税额
+AmountWithTax float not null, -- 含税金额 
+SourceType varchar(50)  null, -- 来源单别
+CustBillNo varchar(50)  null, -- 客户订单
+IsGift int not null, -- 赠品
+Remark varchar(500)  null, -- 分录备注
+a varchar(50)  null,
+b varchar(50)  null,
+c varchar(50)  null
+)
+drop table if exists class;
+-- 应收冲款单主表
+CREATE table yingshouchongkuan(
+CustomerID int not null primary key, -- 客户
+Jiesuanone varchar(50) not null, -- 结算方式一
+Jiesuantwo varchar(50) not null, -- 结算方式二
+Jiesuanthree varchar(50) not null, -- 结算方式三
+DiscountPer float not null, -- 折扣率
+AccMonthToMonth date not null, -- 终止帐月
+BillDate float not null, -- 单据日期
+FundBillNo varchar(50) not null, -- 单据号码
+CurrID int not null, -- 币别
+OffSetStyle varchar(50) not null, -- 应收冲款类型
+VoucherNo varchar(50) not null, -- 凭证编号
+DeptID int not null, -- 所属部门
+ProjectID varchar(50) not null, -- 所属项目
+Maker varchar(50) not null, -- 制单人员
+Permitter varchar(50) not null, -- 复核人员
+a varchar(50)  null, 
+b varchar(50)  null, 
+c varchar(50)  null 
+)
+drop table if exists class;
+-- 应收冲款单内容详表
+CREATE table yingshouchongkuanneirong(
+SerNo int not null primary key, -- 栏号
+OriginFlag varchar(50) not null, -- 单别
+OriginBilldate date not null, -- 原单日期
+OriginBillNo varchar(50) not null, -- 原单单号
+InvoiceNo varchar(50) not null, -- 发票号码
+CustID int not null, -- 交易对象
+CustName varchar(50) not null, -- 交易对象名称
+DeptID int not null, -- 部门编号
+DeptName varchar(50) not null, -- 部门名称
+PersonName varchar(50) not null, -- 业务人员
+ProjectName varchar(50) null, -- 项目名称
+CurrID int not null, -- 币别
+ExchRate float not null, -- 汇率
+Total float not null, -- 原单金额
+NowLeft float not null, -- 现行余额
+Discount float not null, -- 折让金额
+Offset float not null, -- 冲款金额
+OffsetMoney float not null, -- 冲抵金额
+a varchar(50)  null,
+b varchar(50)  null,
+c varchar(50)  null
+)
+
+drop table if exists class;
+-- 应收冲款单取用预收详表
+CREATE table yingshouchongkuanqyys(
+OffsetNo varchar(50) not null primary key, -- 应收冲款单号
+OriginFlag varchar(50) not null, -- 来源别
+FromOrderNo varchar(50) not null, -- 来源单号
+PrepayLeft float not null, -- 预收余额
+DeptID varchar(50) not null, -- 部门编号
+DeptName varchar(50) not null, -- 部门名称
+UseMoney float not null, -- 取用预收金额
+FromDescription varchar(500) not null, -- 来源摘要
+a varchar(50)  null,
+b varchar(50)  null,
+c varchar(50)  null
+)
