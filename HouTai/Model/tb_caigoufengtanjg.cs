@@ -12,19 +12,19 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_caigoufengtanjg
+    public partial class tb_CaiGouFengTanJG
     {
         public int BillDate { get; set; }
         public Nullable<int> CaiGouRKID { get; set; }
         public string WUliaoBH { get; set; }
         public string WUliaoName { get; set; }
         public string GuiGeXH { get; set; }
-        public Nullable<double> CaiGouJE { get; set; }
+        public string CaiGouJE { get; set; }
         public Nullable<int> ShuLiang { get; set; }
         public Nullable<int> DanWei { get; set; }
         public Nullable<int> ZhongLiang { get; set; }
         public Nullable<int> CaiJi { get; set; }
-        public Nullable<float> FengTanJE { get; set; }
+        public string FengTanJE { get; set; }
         public string a { get; set; }
         public string b { get; set; }
     }

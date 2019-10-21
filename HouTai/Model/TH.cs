@@ -12,19 +12,19 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tuihuo
+    public partial class TH
     {
         public string CustID { get; set; }
-        public System.DateTime BillDate { get; set; }
+        public Nullable<System.DateTime> BillDate { get; set; }
         public string SoHuoAddress { get; set; }
-        public int BillNo { get; set; }
+        public Nullable<int> BillNo { get; set; }
         public string YesNoshui { get; set; }
         public string BB { get; set; }
         public string Cangku { get; set; }
         public string Huilv { get; set; }
         public string Chongxingchuku { get; set; }
         public string Guowaimaoyi { get; set; }
-        public int Pingzhengbianhao { get; set; }
+        public Nullable<int> Pingzhengbianhao { get; set; }
         public string Yewurenyuan { get; set; }
         public string Zhidanrenyuan { get; set; }
         public string Suoshubumen { get; set; }

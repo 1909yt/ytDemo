@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class quotaxiang
+    public partial class Quotaxiang
     {
         public int SerNO { get; set; }
         public string ProdID { get; set; }
@@ -20,14 +20,14 @@ namespace Model
         public string ProdSize { get; set; }
         public string Sunit { get; set; }
         public Nullable<int> sQuantity { get; set; }
-        public Nullable<double> OldPrice { get; set; }
-        public Nullable<double> Discount { get; set; }
-        public Nullable<double> sPrice { get; set; }
-        public Nullable<double> Amount { get; set; }
-        public Nullable<double> TaxRate { get; set; }
-        public Nullable<double> TaxAmt { get; set; }
-        public Nullable<double> VFTotal { get; set; }
-        public Nullable<float> IsGift { get; set; }
+        public string OldPrice { get; set; }
+        public string Discount { get; set; }
+        public string sPrice { get; set; }
+        public string Amount { get; set; }
+        public string TaxRate { get; set; }
+        public string TaxAmt { get; set; }
+        public string VFTotal { get; set; }
+        public Nullable<double> IsGift { get; set; }
         public string ItemRemark { get; set; }
         public string beiyong { get; set; }
     }

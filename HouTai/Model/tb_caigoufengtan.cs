@@ -12,13 +12,13 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_caigoufengtan
+    public partial class tb_CaiGouFengTan
     {
         public string BillDate { get; set; }
         public int BillNo { get; set; }
         public string FenTanFS { get; set; }
         public Nullable<int> PingZhengBH { get; set; }
-        public Nullable<float> DaiTanMonery { get; set; }
+        public string DaiTanMonery { get; set; }
         public string Maker { get; set; }
         public string Permitter { get; set; }
         public string a { get; set; }

@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class pandiandanxb
+    public partial class PandiandanXB
     {
         public int SerNo { get; set; }
         public int ProdID { get; set; }
@@ -22,7 +22,7 @@ namespace Model
         public int CurQty { get; set; }
         public int CheckQty { get; set; }
         public int Quantity { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
         public int Amount { get; set; }
         public int HaveBatch { get; set; }
         public string ItemRemark { get; set; }

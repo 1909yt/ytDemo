@@ -26,7 +26,7 @@ namespace Model
         public string InvoiceNo { get; set; }
         public int InvoTypeId { get; set; }
         public int CurrID { get; set; }
-        public float ExchRate { get; set; }
+        public double ExchRate { get; set; }
         public string Salesman { get; set; }
         public int DeptID { get; set; }
         public string ProjectID { get; set; }

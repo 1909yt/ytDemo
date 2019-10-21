@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tiaojiadan
+    public partial class Tiaojiadan
     {
         public int BillNo { get; set; }
         public System.DateTime AdjustDate { get; set; }
@@ -27,6 +27,6 @@ namespace Model
         public string ShenHe { get; set; }
         public string ShenHeren { get; set; }
         public string ShenHetime { get; set; }
-        public string a { get; set; }
+        public string one { get; set; }
     }
 }

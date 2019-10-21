@@ -12,9 +12,9 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_wuliaoweihujyziliao
+    public partial class tb_WuLiaoWeiHuJYziliao
     {
-        public System.DateTime ZCchukuR { get; set; }
+        public Nullable<System.DateTime> ZCchukuR { get; set; }
         public Nullable<System.DateTime> BQutStockDay { get; set; }
         public Nullable<System.DateTime> BInStockDay { get; set; }
         public Nullable<System.DateTime> ZJrukuDate { get; set; }

@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class weihubiao
+    public partial class XiaoShouChuKan
     {
         public string kh { get; set; }
         public System.DateTime djrq { get; set; }

@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class kucuntaizhang
+    public partial class KuCunTaiZhang
     {
         public string CangkuQuian { get; set; }
         public string WuliaoQujian { get; set; }

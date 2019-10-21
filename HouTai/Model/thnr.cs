@@ -12,27 +12,27 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tuihuoneirong
+    public partial class thnr
     {
         public string Lanmu { get; set; }
-        public int Wuliaobianhao { get; set; }
+        public Nullable<int> Wuliaobianhao { get; set; }
         public string Wuliaomingcheng { get; set; }
         public string Guigexinghao { get; set; }
         public string Danweimingcheng { get; set; }
-        public int Shuliang { get; set; }
-        public int Zhekouqiandanjia { get; set; }
-        public int Zheshu { get; set; }
-        public int Danjia { get; set; }
-        public int Jine { get; set; }
-        public int Shuilv { get; set; }
-        public int Hanshuijine { get; set; }
-        public int Pihao { get; set; }
+        public Nullable<int> Shuliang { get; set; }
+        public Nullable<int> Zhekouqiandanjia { get; set; }
+        public Nullable<int> Zheshu { get; set; }
+        public Nullable<int> Danjia { get; set; }
+        public Nullable<int> Jine { get; set; }
+        public Nullable<int> Shuilv { get; set; }
+        public Nullable<int> Hanshuijine { get; set; }
+        public Nullable<int> Pihao { get; set; }
         public string Zengping { get; set; }
         public string Fapiaomingxi { get; set; }
-        public int Weikaipiaoshuliang { get; set; }
+        public Nullable<int> Weikaipiaoshuliang { get; set; }
         public string Fenlubeizhu { get; set; }
         public string Laiyuandanbie { get; set; }
-        public int Laiyuandanhao { get; set; }
+        public Nullable<int> Laiyuandanhao { get; set; }
         public string one { get; set; }
     }
 }

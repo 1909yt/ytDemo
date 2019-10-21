@@ -12,18 +12,18 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class quotation
+    public partial class Quotation
     {
         public string BillNO { get; set; }
         public Nullable<System.DateTime> BillDate { get; set; }
-        public Nullable<float> FormalCust { get; set; }
+        public Nullable<double> FormalCust { get; set; }
         public string CustomerID { get; set; }
         public string CustAreaID { get; set; }
         public string CustAreaName { get; set; }
         public Nullable<System.DateTime> ValidDate { get; set; }
-        public Nullable<float> PriceOfTax { get; set; }
+        public Nullable<double> PriceOfTax { get; set; }
         public string CurrID { get; set; }
-        public Nullable<double> ExchRate { get; set; }
+        public string ExchRate { get; set; }
         public string SalesID { get; set; }
         public string Rermitter { get; set; }
         public string DepartID { get; set; }

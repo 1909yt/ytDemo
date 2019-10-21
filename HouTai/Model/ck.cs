@@ -12,14 +12,14 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class cangku
+    public partial class ck
     {
         public int WareHouseID { get; set; }
         public string WareHouseName { get; set; }
         public string ShortName { get; set; }
         public string EngName { get; set; }
         public string LinkMan { get; set; }
-        public int Telephone { get; set; }
+        public Nullable<int> Telephone { get; set; }
         public string WareHouseAddress { get; set; }
         public string Memo { get; set; }
         public string one { get; set; }

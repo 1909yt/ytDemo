@@ -20,12 +20,12 @@ namespace Model
         public string ProdSize { get; set; }
         public string SUnit { get; set; }
         public string sQuantity { get; set; }
-        public Nullable<float> OldPrice { get; set; }
-        public Nullable<float> Discount { get; set; }
-        public Nullable<float> Amount { get; set; }
-        public Nullable<float> TaxRate { get; set; }
-        public Nullable<float> TaxAmt { get; set; }
-        public Nullable<float> VFTotal { get; set; }
+        public Nullable<double> OldPrice { get; set; }
+        public Nullable<double> Discount { get; set; }
+        public Nullable<double> Amount { get; set; }
+        public Nullable<double> TaxRate { get; set; }
+        public Nullable<double> TaxAmt { get; set; }
+        public Nullable<double> VFTotal { get; set; }
         public Nullable<System.DateTime> PreInDate { get; set; }
         public Nullable<int> QtyRemain { get; set; }
         public string IsGift { get; set; }

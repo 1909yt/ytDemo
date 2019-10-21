@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class qitaruku
+    public partial class Qitaruku
     {
         public string BillStyeID { get; set; }
         public Nullable<System.DateTime> AdjustDate { get; set; }

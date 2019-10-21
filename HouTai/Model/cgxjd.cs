@@ -21,7 +21,7 @@ namespace Model
         public string BillDate { get; set; }
         public string BillNO { get; set; }
         public string CurrID { get; set; }
-        public Nullable<float> ExchRate { get; set; }
+        public Nullable<double> ExchRate { get; set; }
         public string OutAddress { get; set; }
         public string Maker { get; set; }
         public string SalesName { get; set; }

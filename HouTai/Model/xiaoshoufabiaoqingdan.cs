@@ -19,15 +19,15 @@ namespace Model
         public string ProdName { get; set; }
         public string ProdSize { get; set; }
         public string SUnit { get; set; }
-        public Nullable<float> SourcePrice { get; set; }
-        public float Amount { get; set; }
+        public Nullable<double> SourcePrice { get; set; }
+        public double Amount { get; set; }
         public int SQuantity { get; set; }
         public int HasCombine { get; set; }
-        public float Price { get; set; }
-        public float Amountaa { get; set; }
-        public float TaxRate { get; set; }
-        public float TaxAmt { get; set; }
-        public float AmountWithTax { get; set; }
+        public double Price { get; set; }
+        public double Amountaa { get; set; }
+        public double TaxRate { get; set; }
+        public double TaxAmt { get; set; }
+        public double AmountWithTax { get; set; }
         public string SourceType { get; set; }
         public string CustBillNo { get; set; }
         public int IsGift { get; set; }

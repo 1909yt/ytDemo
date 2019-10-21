@@ -21,10 +21,10 @@ namespace Model
         public string SUnit { get; set; }
         public string sQuantity { get; set; }
         public string CurrID { get; set; }
-        public Nullable<float> sPrice { get; set; }
-        public Nullable<float> Amount { get; set; }
-        public Nullable<float> LastestsPrice { get; set; }
-        public Nullable<float> LastestAmount { get; set; }
+        public Nullable<double> sPrice { get; set; }
+        public Nullable<double> Amount { get; set; }
+        public Nullable<double> LastestsPrice { get; set; }
+        public Nullable<double> LastestAmount { get; set; }
         public Nullable<System.DateTime> PreInDate { get; set; }
         public Nullable<System.DateTime> SuggestPur { get; set; }
         public Nullable<int> QtyRemain { get; set; }

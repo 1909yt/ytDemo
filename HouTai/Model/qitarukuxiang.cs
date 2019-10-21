@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class qitarukuxiang
+    public partial class Qitarukuxiang
     {
         public int SerNO { get; set; }
         public string ProdID { get; set; }
@@ -20,9 +20,9 @@ namespace Model
         public string ProdSize { get; set; }
         public string Sunit { get; set; }
         public Nullable<int> sQuantity { get; set; }
-        public Nullable<double> sPrice { get; set; }
-        public Nullable<double> Amount { get; set; }
-        public Nullable<float> BatchID { get; set; }
+        public string sPrice { get; set; }
+        public string Amount { get; set; }
+        public string BatchID { get; set; }
         public string ItemRemark { get; set; }
     }
 }

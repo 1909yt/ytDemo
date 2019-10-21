@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class xiaoshoudingd
+    public partial class Xiaoshoudingd
     {
         public string BillNO { get; set; }
         public Nullable<System.DateTime> BillDate { get; set; }
@@ -21,11 +21,11 @@ namespace Model
         public string CustAreaID { get; set; }
         public string CustAreaName { get; set; }
         public Nullable<System.DateTime> ValidDate { get; set; }
-        public Nullable<float> PriceOfTax { get; set; }
+        public Nullable<double> PriceOfTax { get; set; }
         public string CustBillNo { get; set; }
         public string BillStatus { get; set; }
         public string CurrID { get; set; }
-        public Nullable<double> ExchRate { get; set; }
+        public string ExchRate { get; set; }
         public string SalesID { get; set; }
         public string Rermitter { get; set; }
         public string DepartID { get; set; }

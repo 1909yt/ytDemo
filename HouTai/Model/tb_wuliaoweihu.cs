@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_wuliaoweihu
+    public partial class tb_WuLiaoWeiHu
     {
         public int ProdID { get; set; }
         public string Classleibie { get; set; }

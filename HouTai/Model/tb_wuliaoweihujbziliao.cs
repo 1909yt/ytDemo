@@ -12,20 +12,20 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_wuliaoweihujbziliao
+    public partial class tb_WuLiaoWeiHuJBziliao
     {
-        public double SuggestPrice { get; set; }
+        public string SuggestPrice { get; set; }
         public string CurrName { get; set; }
-        public Nullable<double> SalesPriceA { get; set; }
-        public Nullable<double> SalesPriceB { get; set; }
-        public Nullable<double> SalesPriceC { get; set; }
-        public Nullable<double> SalesPriceD { get; set; }
-        public Nullable<double> SalesPriceE { get; set; }
-        public Nullable<double> StdPrice { get; set; }
+        public string SalesPriceA { get; set; }
+        public string SalesPriceB { get; set; }
+        public string SalesPriceC { get; set; }
+        public string SalesPriceD { get; set; }
+        public string SalesPriceE { get; set; }
+        public string StdPrice { get; set; }
         public string ProdForm { get; set; }
         public string PriceOfTax { get; set; }
         public string TaxItemsID { get; set; }
-        public Nullable<double> BusiTaxRate { get; set; }
+        public string BusiTaxRate { get; set; }
         public Nullable<int> AdvanceDays { get; set; }
         public string MajorSupplier { get; set; }
         public string a { get; set; }

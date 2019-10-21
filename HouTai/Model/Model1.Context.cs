@@ -13,10 +13,10 @@ namespace Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class erpEntities : DbContext
+    public partial class erpEntities1 : DbContext
     {
-        public erpEntities()
-            : base("name=erpEntities")
+        public erpEntities1()
+            : base("name=erpEntities1")
         {
         }
     
@@ -25,52 +25,56 @@ namespace Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<bumenweihu> bumenweihu { get; set; }
-        public DbSet<bz> bz { get; set; }
-        public DbSet<cangku> cangku { get; set; }
-        public DbSet<cgdd> cgdd { get; set; }
-        public DbSet<cgddnr> cgddnr { get; set; }
-        public DbSet<cgqgd> cgqgd { get; set; }
-        public DbSet<cgqgdnr> cgqgdnr { get; set; }
-        public DbSet<cgxjd> cgxjd { get; set; }
-        public DbSet<diaobodan> diaobodan { get; set; }
-        public DbSet<diaobodanxb> diaobodanxb { get; set; }
-        public DbSet<kucundaizhi> kucundaizhi { get; set; }
-        public DbSet<kucuntaizhang> kucuntaizhang { get; set; }
-        public DbSet<mingxikehu> mingxikehu { get; set; }
-        public DbSet<mingxiyewuyuan> mingxiyewuyuan { get; set; }
-        public DbSet<pandiandan> pandiandan { get; set; }
-        public DbSet<pandiandanxb> pandiandanxb { get; set; }
-        public DbSet<qitaruku> qitaruku { get; set; }
-        public DbSet<qitarukuxiang> qitarukuxiang { get; set; }
-        public DbSet<quotation> quotation { get; set; }
-        public DbSet<quotaxiang> quotaxiang { get; set; }
-        public DbSet<renyuanweihu> renyuanweihu { get; set; }
-        public DbSet<tb_caigoufengtan> tb_caigoufengtan { get; set; }
-        public DbSet<tb_caigoufengtanjg> tb_caigoufengtanjg { get; set; }
-        public DbSet<tb_caigoufengtanmx> tb_caigoufengtanmx { get; set; }
-        public DbSet<tb_caigourukud> tb_caigourukud { get; set; }
-        public DbSet<tb_caigourukudneir> tb_caigourukudneir { get; set; }
-        public DbSet<tb_caigoutuihuo> tb_caigoutuihuo { get; set; }
-        public DbSet<tb_caigoutuihuotwo> tb_caigoutuihuotwo { get; set; }
-        public DbSet<tb_wuliaoweihu> tb_wuliaoweihu { get; set; }
-        public DbSet<tb_wuliaoweihucunliangxx> tb_wuliaoweihucunliangxx { get; set; }
-        public DbSet<tb_wuliaoweihujbziliao> tb_wuliaoweihujbziliao { get; set; }
-        public DbSet<tb_wuliaoweihujyziliao> tb_wuliaoweihujyziliao { get; set; }
-        public DbSet<tiaojiadanxb> tiaojiadanxb { get; set; }
-        public DbSet<tuihuo> tuihuo { get; set; }
-        public DbSet<tuihuoneirong> tuihuoneirong { get; set; }
-        public DbSet<weihubiao> weihubiao { get; set; }
-        public DbSet<xiaoshoudingd> xiaoshoudingd { get; set; }
-        public DbSet<xiaoshoufabiao> xiaoshoufabiao { get; set; }
-        public DbSet<xiaoshoufabiaoneirong> xiaoshoufabiaoneirong { get; set; }
-        public DbSet<xiaoshoufabiaoqingdan> xiaoshoufabiaoqingdan { get; set; }
-        public DbSet<xiaoshouzhi> xiaoshouzhi { get; set; }
-        public DbSet<yingshouchongkuan> yingshouchongkuan { get; set; }
-        public DbSet<yingshouchongkuanneirong> yingshouchongkuanneirong { get; set; }
-        public DbSet<yingshouchongkuanqyys> yingshouchongkuanqyys { get; set; }
-        public DbSet<yingshoukuan> yingshoukuan { get; set; }
-        public DbSet<yingshoukuanxiangbiao> yingshoukuanxiangbiao { get; set; }
-        public DbSet<tiaojiadan> tiaojiadan { get; set; }
+        public DbSet<BuMenWeihu> BuMenWeihus { get; set; }
+        public DbSet<cgddnr> cgddnrs { get; set; }
+        public DbSet<cgqgdnr> cgqgdnrs { get; set; }
+        public DbSet<ck> cks { get; set; }
+        public DbSet<DiaoBodan> DiaoBodans { get; set; }
+        public DbSet<DiaoBodanXB> DiaoBodanXBs { get; set; }
+        public DbSet<KeHuZB> KeHuZBs { get; set; }
+        public DbSet<KuCunDaizhi> KuCunDaizhis { get; set; }
+        public DbSet<KuCunTaiZhang> KuCunTaiZhangs { get; set; }
+        public DbSet<Pandiandan> Pandiandans { get; set; }
+        public DbSet<PandiandanXB> PandiandanXBs { get; set; }
+        public DbSet<RenyuanWeihu> RenyuanWeihus { get; set; }
+        public DbSet<t_store> t_store { get; set; }
+        public DbSet<tb_bei> tb_bei { get; set; }
+        public DbSet<tb_CaiGouFengTan> tb_CaiGouFengTan { get; set; }
+        public DbSet<tb_CaiGouFengTanJG> tb_CaiGouFengTanJG { get; set; }
+        public DbSet<tb_CaiGouFengTanMX> tb_CaiGouFengTanMX { get; set; }
+        public DbSet<tb_CaiGouRuKuD> tb_CaiGouRuKuD { get; set; }
+        public DbSet<tb_CaiGouRuKuDNeiR> tb_CaiGouRuKuDNeiR { get; set; }
+        public DbSet<tb_CaiGouTuiHuo> tb_CaiGouTuiHuo { get; set; }
+        public DbSet<tb_CaiGouTuiHuotwo> tb_CaiGouTuiHuotwo { get; set; }
+        public DbSet<Tb_fapiao> Tb_fapiao { get; set; }
+        public DbSet<tb_nrong> tb_nrong { get; set; }
+        public DbSet<tb_qingdan> tb_qingdan { get; set; }
+        public DbSet<tb_WuLiaoWeiHu> tb_WuLiaoWeiHu { get; set; }
+        public DbSet<tb_WuLiaoWeiHuCunLiangXX> tb_WuLiaoWeiHuCunLiangXX { get; set; }
+        public DbSet<tb_WuLiaoWeiHuJBziliao> tb_WuLiaoWeiHuJBziliao { get; set; }
+        public DbSet<tb_WuLiaoWeiHuJYziliao> tb_WuLiaoWeiHuJYziliao { get; set; }
+        public DbSet<TH> THs { get; set; }
+        public DbSet<thnr> thnrs { get; set; }
+        public DbSet<Tiaojiadan> Tiaojiadans { get; set; }
+        public DbSet<TiaojiadanXB> TiaojiadanXBs { get; set; }
+        public DbSet<XiaoShouChuKan> XiaoShouChuKans { get; set; }
+        public DbSet<xiaoshoufabiao> xiaoshoufabiaos { get; set; }
+        public DbSet<xiaoshoufabiaoneirong> xiaoshoufabiaoneirongs { get; set; }
+        public DbSet<xiaoshoufabiaoqingdan> xiaoshoufabiaoqingdans { get; set; }
+        public DbSet<yingshouchongkuan> yingshouchongkuans { get; set; }
+        public DbSet<yingshouchongkuanneirong> yingshouchongkuanneirongs { get; set; }
+        public DbSet<yingshouchongkuanqyy> yingshouchongkuanqyys { get; set; }
+        public DbSet<ysk> ysks { get; set; }
+        public DbSet<bz> bzs { get; set; }
+        public DbSet<cgdd> cgdds { get; set; }
+        public DbSet<cgqgd> cgqgds { get; set; }
+        public DbSet<cgxjd> cgxjds { get; set; }
+        public DbSet<Qitaruku> Qitarukus { get; set; }
+        public DbSet<Qitarukuxiang> Qitarukuxiangs { get; set; }
+        public DbSet<Quotation> Quotations { get; set; }
+        public DbSet<Quotaxiang> Quotaxiangs { get; set; }
+        public DbSet<Xiaoshouzhi> Xiaoshouzhis { get; set; }
+        public DbSet<yskxb> yskxbs { get; set; }
+        public DbSet<Xiaoshoudingd> Xiaoshoudingds { get; set; }
     }
 }

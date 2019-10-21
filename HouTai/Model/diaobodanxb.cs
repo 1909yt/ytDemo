@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class diaobodanxb
+    public partial class DiaoBodanXB
     {
         public int SerNo { get; set; }
         public string ProdID { get; set; }

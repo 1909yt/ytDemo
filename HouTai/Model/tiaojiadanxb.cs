@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tiaojiadanxb
+    public partial class TiaojiadanXB
     {
         public int SerNo { get; set; }
         public int ProdID { get; set; }
@@ -20,9 +20,9 @@ namespace Model
         public string ProdSize { get; set; }
         public string Unit { get; set; }
         public int CurQty { get; set; }
-        public float LcostAvg { get; set; }
-        public float Price { get; set; }
-        public float Amount { get; set; }
+        public double LcostAvg { get; set; }
+        public double Price { get; set; }
+        public double Amount { get; set; }
         public string ItemRemark { get; set; }
         public string One { get; set; }
     }

@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class xiaoshouzhi
+    public partial class Xiaoshouzhi
     {
         public int SerNO { get; set; }
         public string ProdID { get; set; }
@@ -20,24 +20,24 @@ namespace Model
         public string ProdSize { get; set; }
         public string Sunit { get; set; }
         public Nullable<int> sQuantity { get; set; }
-        public Nullable<double> OldPrice { get; set; }
-        public Nullable<double> Discount { get; set; }
-        public Nullable<double> sPrice { get; set; }
-        public Nullable<double> Amount { get; set; }
-        public Nullable<double> TaxRate { get; set; }
-        public Nullable<double> TaxAmt { get; set; }
-        public Nullable<double> VFTotal { get; set; }
-        public Nullable<float> IsGift { get; set; }
+        public string OldPrice { get; set; }
+        public string Discount { get; set; }
+        public string sPrice { get; set; }
+        public string Amount { get; set; }
+        public string TaxRate { get; set; }
+        public string TaxAmt { get; set; }
+        public string VFTotal { get; set; }
+        public Nullable<double> IsGift { get; set; }
         public string ItemRemark { get; set; }
         public string beiyong { get; set; }
         public Nullable<System.DateTime> PreInDate { get; set; }
-        public Nullable<double> QtyRemain { get; set; }
+        public string QtyRemain { get; set; }
         public string TranType { get; set; }
-        public Nullable<float> HasCombine { get; set; }
+        public Nullable<double> HasCombine { get; set; }
         public string FromNO { get; set; }
-        public Nullable<float> IsManu { get; set; }
+        public Nullable<double> IsManu { get; set; }
         public string ArrangeNO { get; set; }
-        public Nullable<double> ManuQty { get; set; }
+        public string ManuQty { get; set; }
         public string cheshi { get; set; }
     }
 }

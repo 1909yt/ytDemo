@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class pandiandan
+    public partial class Pandiandan
     {
         public int BillNo { get; set; }
         public string WareID { get; set; }

@@ -46,13 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bumenweihu.cs">
+    <Compile Include="BuMenWeihu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bz.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="cangku.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="cgdd.cs">
@@ -70,23 +67,23 @@
     <Compile Include="cgxjd.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ck.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="diaobodan.cs">
+    <Compile Include="DiaoBodan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="diaobodanxb.cs">
+    <Compile Include="DiaoBodanXB.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="kucundaizhi.cs">
+    <Compile Include="KeHuZB.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="kucuntaizhang.cs">
+    <Compile Include="KuCunDaizhi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="mingxikehu.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="mingxiyewuyuan.cs">
+    <Compile Include="KuCunTaiZhang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -104,77 +101,92 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="pandiandan.cs">
+    <Compile Include="Pandiandan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="pandiandanxb.cs">
+    <Compile Include="PandiandanXB.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qitaruku.cs">
+    <Compile Include="Qitaruku.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="qitarukuxiang.cs">
+    <Compile Include="Qitarukuxiang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="quotation.cs">
+    <Compile Include="Quotation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="quotaxiang.cs">
+    <Compile Include="Quotaxiang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="renyuanweihu.cs">
+    <Compile Include="RenyuanWeihu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigoufengtan.cs">
+    <Compile Include="tb_bei.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigoufengtanjg.cs">
+    <Compile Include="tb_CaiGouFengTan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigoufengtanmx.cs">
+    <Compile Include="tb_CaiGouFengTanJG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigourukud.cs">
+    <Compile Include="tb_CaiGouFengTanMX.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigourukudneir.cs">
+    <Compile Include="tb_CaiGouRuKuD.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigoutuihuo.cs">
+    <Compile Include="tb_CaiGouRuKuDNeiR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_caigoutuihuotwo.cs">
+    <Compile Include="tb_CaiGouTuiHuo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_wuliaoweihu.cs">
+    <Compile Include="tb_CaiGouTuiHuotwo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_wuliaoweihucunliangxx.cs">
+    <Compile Include="Tb_fapiao.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_wuliaoweihujbziliao.cs">
+    <Compile Include="tb_nrong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_wuliaoweihujyziliao.cs">
+    <Compile Include="tb_qingdan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tiaojiadan.cs">
+    <Compile Include="tb_WuLiaoWeiHu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tiaojiadanxb.cs">
+    <Compile Include="tb_WuLiaoWeiHuCunLiangXX.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tuihuo.cs">
+    <Compile Include="tb_WuLiaoWeiHuJBziliao.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="tuihuoneirong.cs">
+    <Compile Include="tb_WuLiaoWeiHuJYziliao.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="weihubiao.cs">
+    <Compile Include="TH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="xiaoshoudingd.cs">
+    <Compile Include="thnr.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tiaojiadan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiaojiadanXB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="t_store.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XiaoShouChuKan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Xiaoshoudingd.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="xiaoshoufabiao.cs">
@@ -186,7 +198,7 @@
     <Compile Include="xiaoshoufabiaoqingdan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="xiaoshouzhi.cs">
+    <Compile Include="Xiaoshouzhi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="yingshouchongkuan.cs">
@@ -195,24 +207,22 @@
     <Compile Include="yingshouchongkuanneirong.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="yingshouchongkuanqyys.cs">
+    <Compile Include="yingshouchongkuanqyy.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="yingshoukuan.cs">
+    <Compile Include="ysk.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="yingshoukuanxiangbiao.cs">
+    <Compile Include="yskxb.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

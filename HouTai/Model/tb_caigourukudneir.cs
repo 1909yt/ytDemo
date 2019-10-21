@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_caigourukudneir
+    public partial class tb_CaiGouRuKuDNeiR
     {
         public int SerNo { get; set; }
         public Nullable<int> ProdID { get; set; }
@@ -20,13 +20,13 @@ namespace Model
         public string ProdSize { get; set; }
         public string SUnit { get; set; }
         public Nullable<int> SQuantity { get; set; }
-        public Nullable<float> OldPrice { get; set; }
-        public Nullable<float> Discount { get; set; }
-        public Nullable<float> SPrice { get; set; }
-        public Nullable<float> Amount { get; set; }
-        public Nullable<float> TaxRate { get; set; }
-        public Nullable<float> TaxAmt { get; set; }
-        public Nullable<float> AmountATax { get; set; }
+        public string OldPrice { get; set; }
+        public string Discount { get; set; }
+        public string SPrice { get; set; }
+        public string Amount { get; set; }
+        public string TaxRate { get; set; }
+        public string TaxAmt { get; set; }
+        public string AmountATax { get; set; }
         public string HaveBetch { get; set; }
         public string IsGift { get; set; }
         public string HasInv { get; set; }
@@ -34,7 +34,7 @@ namespace Model
         public string ItemRemark { get; set; }
         public string TranType { get; set; }
         public string FromNO { get; set; }
-        public Nullable<float> MLAppFare { get; set; }
+        public string MLAppFare { get; set; }
         public string a { get; set; }
         public string b { get; set; }
     }

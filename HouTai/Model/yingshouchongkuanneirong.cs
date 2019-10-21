@@ -26,12 +26,12 @@ namespace Model
         public string PersonName { get; set; }
         public string ProjectName { get; set; }
         public int CurrID { get; set; }
-        public float ExchRate { get; set; }
-        public float Total { get; set; }
-        public float NowLeft { get; set; }
-        public float Discount { get; set; }
-        public float Offset { get; set; }
-        public float OffsetMoney { get; set; }
+        public double ExchRate { get; set; }
+        public double Total { get; set; }
+        public double NowLeft { get; set; }
+        public double Discount { get; set; }
+        public double Offset { get; set; }
+        public double OffsetMoney { get; set; }
         public string a { get; set; }
         public string b { get; set; }
         public string c { get; set; }

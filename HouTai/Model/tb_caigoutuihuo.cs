@@ -12,16 +12,16 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_caigoutuihuo
+    public partial class tb_CaiGouTuiHuo
     {
         public string CustName { get; set; }
         public string BillDate { get; set; }
         public string AddrID { get; set; }
         public string CustAddress { get; set; }
-        public Nullable<int> BillNo { get; set; }
+        public int BillNo { get; set; }
         public string CurrID { get; set; }
         public string PriceofTax { get; set; }
-        public Nullable<float> ExchRate { get; set; }
+        public string ExchRate { get; set; }
         public string WareName { get; set; }
         public string HasForeignTrade { get; set; }
         public string IsDeduct { get; set; }

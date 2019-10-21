@@ -12,15 +12,15 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class yingshouchongkuanqyys
+    public partial class yingshouchongkuanqyy
     {
         public string OffsetNo { get; set; }
         public string OriginFlag { get; set; }
         public string FromOrderNo { get; set; }
-        public float PrepayLeft { get; set; }
+        public double PrepayLeft { get; set; }
         public string DeptID { get; set; }
         public string DeptName { get; set; }
-        public float UseMoney { get; set; }
+        public double UseMoney { get; set; }
         public string FromDescription { get; set; }
         public string a { get; set; }
         public string b { get; set; }

@@ -20,11 +20,11 @@ namespace Model
         public string ProdSize { get; set; }
         public string SUnit { get; set; }
         public int SQuantity { get; set; }
-        public float SPrice { get; set; }
-        public float Amount { get; set; }
-        public float TaxRate { get; set; }
-        public float TaxAmt { get; set; }
-        public float AmountWithTax { get; set; }
+        public double SPrice { get; set; }
+        public double Amount { get; set; }
+        public double TaxRate { get; set; }
+        public double TaxAmt { get; set; }
+        public double AmountWithTax { get; set; }
         public int LQty { get; set; }
         public string xsdd { get; set; }
         public int IsGift { get; set; }

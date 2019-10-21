@@ -12,7 +12,7 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class bumenweihu
+    public partial class BuMenWeihu
     {
         public int DepartID { get; set; }
         public string DepartName { get; set; }

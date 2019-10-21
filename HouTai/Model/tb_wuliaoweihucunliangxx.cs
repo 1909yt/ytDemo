@@ -12,18 +12,18 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_wuliaoweihucunliangxx
+    public partial class tb_WuLiaoWeiHuCunLiangXX
     {
-        public int SafeQty { get; set; }
+        public Nullable<int> SafeQty { get; set; }
         public Nullable<int> CSafeAllStk { get; set; }
         public Nullable<int> BAllAmt { get; set; }
         public Nullable<int> CAllAmt { get; set; }
-        public Nullable<double> BAvgCost { get; set; }
-        public Nullable<double> CAvgCost { get; set; }
-        public Nullable<double> BStdCost { get; set; }
-        public Nullable<double> CStdCost { get; set; }
-        public Nullable<double> BTotalCost { get; set; }
-        public Nullable<double> XXzongCBCost { get; set; }
+        public string BAvgCost { get; set; }
+        public string CAvgCost { get; set; }
+        public string BStdCost { get; set; }
+        public string CStdCost { get; set; }
+        public string BTotalCost { get; set; }
+        public string XXzongCBCost { get; set; }
         public string a { get; set; }
         public string b { get; set; }
     }

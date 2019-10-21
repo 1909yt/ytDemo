@@ -12,26 +12,26 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class yingshoukuanxiangbiao
+    public partial class yskxb
     {
         public int Lanhao { get; set; }
-        public int Danbie { get; set; }
-        public System.DateTime Yuandanriqi { get; set; }
-        public int Yuandandanhao { get; set; }
-        public int Fapiaohaoma { get; set; }
-        public int Jiaoyiduixiang { get; set; }
+        public Nullable<int> Danbie { get; set; }
+        public Nullable<System.DateTime> Yuandanriqi { get; set; }
+        public Nullable<int> Yuandandanhao { get; set; }
+        public Nullable<int> Fapiaohaoma { get; set; }
+        public Nullable<int> Jiaoyiduixiang { get; set; }
         public string Jiaoyiduixiangmingcheng { get; set; }
-        public int Bumenbianhao { get; set; }
+        public Nullable<int> Bumenbianhao { get; set; }
         public string Bumenmingcheng { get; set; }
         public string Yewurenyuan { get; set; }
         public string Xiangmumingcheng { get; set; }
         public string Bibie { get; set; }
-        public int Huilv { get; set; }
-        public int Yuandanjine { get; set; }
-        public int Xianxinyuane { get; set; }
-        public int Zherangyue { get; set; }
-        public int Chongkuanjine { get; set; }
-        public int Chongdijin { get; set; }
+        public Nullable<int> Huilv { get; set; }
+        public Nullable<int> Yuandanjine { get; set; }
+        public Nullable<int> Xianxinyuane { get; set; }
+        public Nullable<int> Zherangyue { get; set; }
+        public Nullable<int> Chongkuanjine { get; set; }
+        public Nullable<int> Chongdijin { get; set; }
         public string one { get; set; }
     }
 }

@@ -18,9 +18,9 @@ namespace Model
         public string Jiesuanone { get; set; }
         public string Jiesuantwo { get; set; }
         public string Jiesuanthree { get; set; }
-        public float DiscountPer { get; set; }
+        public double DiscountPer { get; set; }
         public System.DateTime AccMonthToMonth { get; set; }
-        public float BillDate { get; set; }
+        public double BillDate { get; set; }
         public string FundBillNo { get; set; }
         public int CurrID { get; set; }
         public string OffSetStyle { get; set; }
