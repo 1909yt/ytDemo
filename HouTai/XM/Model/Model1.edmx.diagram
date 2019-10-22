@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c25b0a1df9c436889d681a5dd34f7d3" Name="关系图1">
+        <EntityTypeShape EntityType="erpModel.BuMenWeihu" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.bz" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.cgdd" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.cgddnr" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.cgqgd" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.cgqgdnr" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.cgxjd" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.ck" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.DiaoBodan" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.DiaoBodanXB" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.KeHuZB" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.KuCunDaizhi" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.KuCunTaiZhang" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Pandiandan" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.PandiandanXB" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Qitaruku" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Qitarukuxiang" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Quotation" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Quotaxiang" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.RenyuanWeihu" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.t_store" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_bei" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouFengTan" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouFengTanJG" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouFengTanMX" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouRuKuD" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouRuKuDNeiR" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouTuiHuo" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_CaiGouTuiHuotwo" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Tb_fapiao" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_nrong" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_qingdan" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_WuLiaoWeiHu" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_WuLiaoWeiHuCunLiangXX" Width="1.5" PointX="2.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_WuLiaoWeiHuJBziliao" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.tb_WuLiaoWeiHuJYziliao" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.TH" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.thnr" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Tiaojiadan" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.TiaojiadanXB" Width="1.5" PointX="20.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.XiaoShouChuKan" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Xiaoshoudingd" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.xiaoshoufabiao" Width="1.5" PointX="18.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.xiaoshoufabiaoneirong" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.xiaoshoufabiaoqingdan" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.Xiaoshouzhi" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.yingshouchongkuan" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.yingshouchongkuanneirong" Width="1.5" PointX="22.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.yingshouchongkuanqyy" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.ysk" Width="1.5" PointX="22.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="erpModel.yskxb" Width="1.5" PointX="2.75" PointY="23.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
